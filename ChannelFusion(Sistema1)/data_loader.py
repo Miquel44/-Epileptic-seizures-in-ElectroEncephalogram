@@ -76,20 +76,53 @@ def create_channel_fusion_input(signals: np.ndarray) -> np.ndarray:
     return signals
 
 
-def get_data_loaders() -> Tuple[DataLoader, DataLoader]:
+def get_data_loaders(patients=None, batch_size=BATCH_SIZE):
     """Crea DataLoaders para entrenamiento y validación."""
-    signals, labels = load_all_patients()
+
+    if patients is None:
+        signals, labels = load_all_patients()
+    else:
+        all_signals = []
+        all_labels = []
+        n_channels = 21  # Número estándar de canales
+
+        for patient_id in patients:
+            try:
+                sig, lab = load_single_patient(patient_id)
+
+                # Estandarizar número de canales
+                if sig.shape[1] > n_channels:
+                    sig = sig[:, :n_channels, :]  # Recortar
+                elif sig.shape[1] < n_channels:
+                    # Rellenar con ceros
+                    padding = np.zeros((sig.shape[0], n_channels - sig.shape[1], sig.shape[2]))
+                    sig = np.concatenate([sig, padding], axis=1)
+
+                all_signals.append(sig)
+                all_labels.append(lab)
+                print(f"Cargado {patient_id}: {sig.shape}")
+            except Exception as e:
+                print(f"Error cargando {patient_id}: {e}")
+
+        # Asegurar tipo float32
+        signals = np.concatenate(all_signals, axis=0).astype(np.float32)
+        labels = np.concatenate(all_labels, axis=0).astype(np.int64)
+
     print(f"Datos originales cargados: {signals.shape}, Etiquetas: {labels.shape}")
     signals = create_channel_fusion_input(signals)
     print(f"Datos totales cargados: {signals.shape}, Etiquetas: {labels.shape}")
+
     X_train, X_val, y_train, y_val = train_test_split(
         signals, labels, test_size=1 - TRAIN_SPLIT, random_state=42, stratify=labels
     )
     print(f"Train set: {X_train.shape}, Val set: {X_val.shape}")
+
     train_dataset = EEGDataset(X_train, y_train)
     val_dataset = EEGDataset(X_val, y_val)
     print(f"Train samples: {len(train_dataset)}, Val samples: {len(val_dataset)}")
-    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
     print(f"Train batches: {len(train_loader)}, Val batches: {len(val_loader)}")
+
     return train_loader, val_loader

@@ -6,76 +6,91 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 from typing import Dict, Tuple
 import numpy as np
 
-from config import EPOCHS, LEARNING_RATE
+from config import EPOCHS, LEARNING_RATE, DEVICE
 
 
 class Trainer:
-    """Clase para entrenar y evaluar modelos de fusión de canales."""
-
-    def __init__(self, model: nn.Module, device: str = None):
-        self.device = device or ('cuda' if torch.cuda.is_available() else 'cpu')
-        self.model = model.to(self.device)
+    def __init__(self, model, patience=5):
+        self.model = model.to(DEVICE)
         self.criterion = nn.CrossEntropyLoss()
-        self.optimizer = Adam(self.model.parameters(), lr=LEARNING_RATE)
-        self.history = {'train_loss': [], 'val_loss': [], 'val_acc': []}
+        self.optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+        self.patience = patience
+        self.history = {
+            'train_loss': [], 'val_loss': [],
+            'train_acc': [], 'val_acc': []
+        }
+        self.best_model_state = None
 
-    def train_epoch(self, train_loader: DataLoader) -> float:
-        """Entrena una época."""
-        self.model.train()
-        total_loss = 0
+    def train(self, train_loader, val_loader, epochs=EPOCHS):
+        print(f"Entrenando en {DEVICE}")
 
-        for data, labels in train_loader:
-            data, labels = data.to(self.device), labels.to(self.device)
-
-            self.optimizer.zero_grad()
-            outputs = self.model(data)
-            loss = self.criterion(outputs, labels)
-            loss.backward()
-            self.optimizer.step()
-
-            total_loss += loss.item()
-
-        return total_loss / len(train_loader)
-
-    def validate(self, val_loader: DataLoader) -> Tuple[float, float]:
-        """Evalúa el modelo en validación."""
-        self.model.eval()
-        total_loss = 0
-        all_preds, all_labels = [], []
-
-        with torch.no_grad():
-            for data, labels in val_loader:
-                data, labels = data.to(self.device), labels.to(self.device)
-                outputs = self.model(data)
-                loss = self.criterion(outputs, labels)
-
-                total_loss += loss.item()
-                preds = torch.argmax(outputs, dim=1)
-                all_preds.extend(preds.cpu().numpy())
-                all_labels.extend(labels.cpu().numpy())
-
-        avg_loss = total_loss / len(val_loader)
-        accuracy = accuracy_score(all_labels, all_preds)
-
-        return avg_loss, accuracy
-
-    def train(self, train_loader: DataLoader, val_loader: DataLoader,
-              epochs: int = EPOCHS) -> Dict:
-        """Entrena el modelo completo."""
-        print(f"Entrenando en {self.device}")
+        best_val_loss = float('inf')
+        patience_counter = 0
 
         for epoch in range(epochs):
-            train_loss = self.train_epoch(train_loader)
-            val_loss, val_acc = self.validate(val_loader)
+            # Training
+            self.model.train()
+            train_loss = 0.0
+            train_correct = 0
+            train_total = 0
 
+            for X, y in train_loader:
+                X, y = X.to(DEVICE), y.to(DEVICE)
+                self.optimizer.zero_grad()
+                outputs = self.model(X)
+                loss = self.criterion(outputs, y)
+                loss.backward()
+                self.optimizer.step()
+
+                train_loss += loss.item()
+                _, predicted = outputs.max(1)
+                train_total += y.size(0)
+                train_correct += predicted.eq(y).sum().item()
+
+            train_loss /= len(train_loader)
+            train_acc = train_correct / train_total
+
+            # Validation
+            self.model.eval()
+            val_loss = 0.0
+            val_correct = 0
+            val_total = 0
+
+            with torch.no_grad():
+                for X, y in val_loader:
+                    X, y = X.to(DEVICE), y.to(DEVICE)
+                    outputs = self.model(X)
+                    loss = self.criterion(outputs, y)
+
+                    val_loss += loss.item()
+                    _, predicted = outputs.max(1)
+                    val_total += y.size(0)
+                    val_correct += predicted.eq(y).sum().item()
+
+            val_loss /= len(val_loader)
+            val_acc = val_correct / val_total
+
+            # Guardar historial
             self.history['train_loss'].append(train_loss)
             self.history['val_loss'].append(val_loss)
+            self.history['train_acc'].append(train_acc)
             self.history['val_acc'].append(val_acc)
 
             print(f"Época {epoch + 1}/{epochs} - "
-                  f"Train Loss: {train_loss:.4f} - "
-                  f"Val Loss: {val_loss:.4f} - "
-                  f"Val Acc: {val_acc:.4f}")
+                  f"Train Loss: {train_loss:.4f} - Train Acc: {train_acc:.4f} - "
+                  f"Val Loss: {val_loss:.4f} - Val Acc: {val_acc:.4f}")
+
+            # Early Stopping
+            if val_loss < best_val_loss:
+                best_val_loss = val_loss
+                patience_counter = 0
+                self.best_model_state = self.model.state_dict().copy()
+            else:
+                patience_counter += 1
+                if patience_counter >= self.patience:
+                    print(f"\nEarly stopping en época {epoch + 1}! No mejora en {self.patience} épocas.")
+                    self.model.load_state_dict(self.best_model_state)
+                    break
 
         return self.history
 
@@ -86,7 +101,7 @@ class Trainer:
 
         with torch.no_grad():
             for data, labels in test_loader:
-                data = data.to(self.device)
+                data = data.to(DEVICE)  # Cambiado de self.device a DEVICE
                 outputs = self.model(data)
                 preds = torch.argmax(outputs, dim=1)
                 all_preds.extend(preds.cpu().numpy())
