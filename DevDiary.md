@@ -20,3 +20,4 @@ En este documento los desarrolladores del trabajo documentarán el trabajo reali
 
 ## Diario de Trabajo (entradas)
 - `Miquel` — `08/12/2025`: Setup Inical del proyecto. Creación del repositorio y estructura básica de carpetas.
+- `Miquel` — `12/12/2025`: Sistema 1 cuasi final. Entrenamiento entero o por un numero de pacientes limitado. Deberiamos limtiar el numero de muestras por paciente para que entre en la RAM de un pc normal que no sea el de linux. Toca adaptar el codigo entero para linux
