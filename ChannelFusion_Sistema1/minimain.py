@@ -13,7 +13,7 @@ import os
 import random
 
 from config import *
-from data_loader import get_patient_dataloader, get_leave_one_out_dataloader
+from data_loader import get_patient_dataloader, get_leave_one_out_dataloader, preload_all_patients
 from models import ChannelFusionCNN
 from trainer import Trainer
 
@@ -61,35 +61,32 @@ def run_personalized_experiment(patients):
 
 def run_leave_one_out_experiment(patients):
     print(f"\n>>> INICIANDO EXPERIMENTO LEAVE-ONE-OUT (Total Folds: {len(patients)}) <<<")
+    
+    # Precargar UNA sola vez
+    preloaded_data = preload_all_patients(patients)
+    
     results_table = []
 
     for test_patient in patients:
         print(f"\n=== Test: {test_patient} (Train: Resto) ===", flush=True)
         
-        # Excluir test_patient del training
         train_patients = [p for p in patients if p != test_patient]
-        
-        # RAM SAFETY: Si son muchos pacientes, coger subconjunto aleatorio para entrenar
-        MAX_TRAIN_PATIENTS = 12 
-        if len(train_patients) > MAX_TRAIN_PATIENTS:
-            print(f"   [RAM Warning] Limitando training a {MAX_TRAIN_PATIENTS} pacientes aleatorios.")
-            train_patients = random.sample(train_patients, MAX_TRAIN_PATIENTS)
 
         try:
-            # 1. Cargar LOO
-            train_loader, val_loader = get_leave_one_out_dataloader(train_patients, test_patient)
+            # Reutilizar la función existente, pasándole los datos precargados
+            train_loader, val_loader = get_leave_one_out_dataloader(
+                train_patients, test_patient, 
+                preloaded_data=preloaded_data
+            )
             
-            # 2. Entrenar
             model = ChannelFusionCNN()
-            trainer = Trainer(model, patience=3) # Menos paciencia, converge más lento pero estable
+            trainer = Trainer(model, patience=3)
             trainer.train(train_loader, val_loader, epochs=EPOCHS)
             
-            # 3. Evaluar
             metrics = trainer.evaluate(val_loader)
-            metrics['patient'] = test_patient # Mismo nombre de columna para el merge posterior
+            metrics['patient'] = test_patient
             results_table.append(metrics)
             
-            # Limpieza
             del model, trainer, train_loader, val_loader
             torch.cuda.empty_cache()
 
