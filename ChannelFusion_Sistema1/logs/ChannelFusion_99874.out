@@ -1,0 +1,67 @@
+Dispositivo: cuda
+CUDA disponible: True
+GPU: NVIDIA TITAN X (Pascal)
+=== Sistema 1: Channel Fusion ===
+
+Pacientes seleccionados (10/24 ~ 40%): ['chb02', 'chb03', 'chb04', 'chb05', 'chb10', 'chb11', 'chb14', 'chb15', 'chb16', 'chb22']
+
+Cargando datos...
+[1/10] Iniciando carga de chb02... Cargado chb02: (9153, 21, 128)
+[2/10] Iniciando carga de chb03... Cargado chb03: (27524, 21, 128)
+[3/10] Iniciando carga de chb04... Cargado chb04: (21860, 21, 128)
+[4/10] Iniciando carga de chb05... Cargado chb05: (12992, 21, 128)
+[5/10] Iniciando carga de chb10... Cargado chb10: (28315, 21, 128)
+[6/10] Iniciando carga de chb11... Cargado chb11: (10959, 21, 128)
+[7/10] Iniciando carga de chb14... Cargado chb14: (25824, 21, 128)
+[8/10] Iniciando carga de chb15... Cargado chb15: (62984, 21, 128)
+[9/10] Iniciando carga de chb16... Cargado chb16: (17926, 21, 128)
+[10/10] Iniciando carga de chb22... Cargado chb22: (12018, 21, 128)
+Datos originales cargados: (229555, 21, 128), Etiquetas: (229555,)
+Datos totales cargados: (229555, 1, 21, 128), Etiquetas: (229555,)
+Train set: (183644, 1, 21, 128), Val set: (45911, 1, 21, 128)
+Train samples: 183644, Val samples: 45911
+Train batches: 5739, Val batches: 1435
+Train batches: 5739, Val batches: 1435
+
+Modelo: ChannelFusionCNN
+Parámetros: 1,154,946
+
+Entrenando en cuda
+Época 1/50 - Train Loss: 0.1379 - Train Acc: 0.9543 - Val Loss: 0.0862 - Val Acc: 0.9728
+Época 2/50 - Train Loss: 0.0741 - Train Acc: 0.9772 - Val Loss: 0.0644 - Val Acc: 0.9801
+Época 3/50 - Train Loss: 0.0566 - Train Acc: 0.9827 - Val Loss: 0.0703 - Val Acc: 0.9768
+Época 4/50 - Train Loss: 0.0438 - Train Acc: 0.9861 - Val Loss: 0.0526 - Val Acc: 0.9813
+Época 5/50 - Train Loss: 0.0348 - Train Acc: 0.9885 - Val Loss: 0.0441 - Val Acc: 0.9862
+Época 6/50 - Train Loss: 0.0291 - Train Acc: 0.9903 - Val Loss: 0.0260 - Val Acc: 0.9913
+Época 7/50 - Train Loss: 0.0231 - Train Acc: 0.9922 - Val Loss: 0.0296 - Val Acc: 0.9893
+Época 8/50 - Train Loss: 0.0200 - Train Acc: 0.9931 - Val Loss: 0.0233 - Val Acc: 0.9921
+Época 9/50 - Train Loss: 0.0164 - Train Acc: 0.9943 - Val Loss: 0.0231 - Val Acc: 0.9929
+Época 10/50 - Train Loss: 0.0155 - Train Acc: 0.9947 - Val Loss: 0.0192 - Val Acc: 0.9946
+Época 11/50 - Train Loss: 0.0136 - Train Acc: 0.9955 - Val Loss: 0.0333 - Val Acc: 0.9890
+Época 12/50 - Train Loss: 0.0115 - Train Acc: 0.9961 - Val Loss: 0.0170 - Val Acc: 0.9946
+Época 13/50 - Train Loss: 0.0097 - Train Acc: 0.9966 - Val Loss: 0.0153 - Val Acc: 0.9953
+Época 14/50 - Train Loss: 0.0099 - Train Acc: 0.9966 - Val Loss: 0.0087 - Val Acc: 0.9969
+Época 15/50 - Train Loss: 0.0089 - Train Acc: 0.9970 - Val Loss: 0.0128 - Val Acc: 0.9961
+Época 16/50 - Train Loss: 0.0083 - Train Acc: 0.9973 - Val Loss: 0.0108 - Val Acc: 0.9962
+Época 17/50 - Train Loss: 0.0077 - Train Acc: 0.9974 - Val Loss: 0.0503 - Val Acc: 0.9861
+Época 18/50 - Train Loss: 0.0068 - Train Acc: 0.9976 - Val Loss: 0.0118 - Val Acc: 0.9964
+Época 19/50 - Train Loss: 0.0069 - Train Acc: 0.9978 - Val Loss: 0.0302 - Val Acc: 0.9924
+
+Early stopping en época 19! No mejora en 5 épocas.
+
+=== Resultados ===
+              precision    recall  f1-score   support
+
+  No Seizure       0.99      1.00      1.00     37705
+     Seizure       0.99      0.97      0.98      8206
+
+    accuracy                           0.99     45911
+   macro avg       0.99      0.98      0.99     45911
+weighted avg       0.99      0.99      0.99     45911
+
+
+Accuracy final: 0.9924
+F1-Score: 0.9924
+Gráficas guardadas en 'training_plots.png'
+
+Modelo guardado en 'channel_fusion_model_4patients.pth'
