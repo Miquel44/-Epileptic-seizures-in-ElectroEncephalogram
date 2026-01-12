@@ -5,7 +5,7 @@ Created on Thu May 19 17:26:05 2022
 
 @author:  Carles Sanchez, Guillermo Torres, Debora Gil, Jose Elias Yauri
 """
-
+import numpy as np
 #Main project directory
 Main_dir = r''
 
@@ -15,7 +15,7 @@ from Models.EpilepsyLSTM import *
 
 
 ### DEFINE VARIABLES
-DEVICE = 'cpu'       # options: 'cpu', 'cuda:0', 'cuda:1'
+DEVICE = 'cuda:0'       # options: 'cpu', 'cuda:0', 'cuda:1'
 N_CLASSES = 2        # number of classes. This case 2={seizure ,non-seizure}
 
 # Default hyper parameters
@@ -56,7 +56,7 @@ model.init_weights()
 model.to(DEVICE)
 
 #Execute lstm unit of shape [batch, sequence_length, features]
-x = torch.from_numpy(np.array(X[0:2,:,:])).float()  # convert the numpy to tensor
+x = torch.from_numpy(np.array(x[0:2,:,:])).float()  # convert the numpy to tensor
 x = x.permute(0, 2, 1).to(DEVICE)                   # permute and send to the same device as the model
 out, (hn, cn) = model.lstm(x)
 
