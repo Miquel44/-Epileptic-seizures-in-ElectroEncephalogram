@@ -1,0 +1,28 @@
+Dispositivo actual: cuda
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> PRUEBA PERSONALIZADA (1 paciente): chb11 <<<
+--- [Personalized] Cargando: chb11 ---
+   Train: 8767 | Val: 2192 | Crisis Train: 4232 | Crisis Val: 2192
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5632 TrAcc: 0.8062 | ValLoss: 0.4080 ValAcc: 0.9275
+Ep 2/50 | TrLoss: 0.3017 TrAcc: 0.9362 | ValLoss: 0.7543 ValAcc: 0.7162
+Ep 3/50 | TrLoss: 0.1006 TrAcc: 0.9817 | ValLoss: 0.7887 ValAcc: 0.9037
+Ep 4/50 | TrLoss: 0.0526 TrAcc: 0.9869 | ValLoss: 0.9332 ValAcc: 0.9133
+Ep 5/50 | TrLoss: 0.0316 TrAcc: 0.9910 | ValLoss: 0.9454 ValAcc: 0.9129
+Ep 6/50 | TrLoss: 0.0255 TrAcc: 0.9941 | ValLoss: 0.8648 ValAcc: 0.9156
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.00      0.00      0.00         0
+     Seizure       1.00      0.92      0.96      2192
+
+    accuracy                           0.92      2192
+   macro avg       0.50      0.46      0.48      2192
+weighted avg       1.00      0.92      0.96      2192
+
+Modelo guardado en models/personalized_chb11.pth

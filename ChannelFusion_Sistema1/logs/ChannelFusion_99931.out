@@ -1,0 +1,703 @@
+Dispositivo actual: cuda
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: 24) <<<
+
+=== Paciente chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   Train: 21223 | Val: 5306 | Crisis Train: 1944 | Crisis Val: 1536
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3454 TrAcc: 0.8910 | ValLoss: 0.2064 ValAcc: 0.9412
+Ep 2/50 | TrLoss: 0.0517 TrAcc: 0.9874 | ValLoss: 0.1559 ValAcc: 0.9542
+Ep 3/50 | TrLoss: 0.0295 TrAcc: 0.9924 | ValLoss: 0.1030 ValAcc: 0.9661
+Ep 4/50 | TrLoss: 0.0159 TrAcc: 0.9957 | ValLoss: 0.0824 ValAcc: 0.9697
+Ep 5/50 | TrLoss: 0.0080 TrAcc: 0.9975 | ValLoss: 0.0762 ValAcc: 0.9729
+Ep 6/50 | TrLoss: 0.0048 TrAcc: 0.9987 | ValLoss: 0.0835 ValAcc: 0.9764
+Ep 7/50 | TrLoss: 0.0036 TrAcc: 0.9990 | ValLoss: 0.1033 ValAcc: 0.9678
+Ep 8/50 | TrLoss: 0.0065 TrAcc: 0.9979 | ValLoss: 0.0757 ValAcc: 0.9800
+Ep 9/50 | TrLoss: 0.0014 TrAcc: 0.9998 | ValLoss: 0.0865 ValAcc: 0.9781
+Ep 10/50 | TrLoss: 0.0007 TrAcc: 0.9999 | ValLoss: 0.0799 ValAcc: 0.9813
+Ep 11/50 | TrLoss: 0.0006 TrAcc: 0.9999 | ValLoss: 0.0890 ValAcc: 0.9779
+Ep 12/50 | TrLoss: 0.0003 TrAcc: 1.0000 | ValLoss: 0.0945 ValAcc: 0.9783
+Ep 13/50 | TrLoss: 0.0002 TrAcc: 1.0000 | ValLoss: 0.0919 ValAcc: 0.9798
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.98      0.99      3770
+     Seizure       0.96      0.97      0.97      1536
+
+    accuracy                           0.98      5306
+   macro avg       0.97      0.98      0.98      5306
+weighted avg       0.98      0.98      0.98      5306
+
+
+=== Paciente chb02 ===
+--- [Personalized] Cargando: chb02 ---
+   Train: 7322 | Val: 1831 | Crisis Train: 1288 | Crisis Val: 64
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5616 TrAcc: 0.8240 | ValLoss: 0.5182 ValAcc: 0.9650
+Ep 2/50 | TrLoss: 0.3601 TrAcc: 0.8416 | ValLoss: 0.2823 ValAcc: 0.9498
+Ep 3/50 | TrLoss: 0.1895 TrAcc: 0.9540 | ValLoss: 0.1106 ValAcc: 0.9678
+Ep 4/50 | TrLoss: 0.0899 TrAcc: 0.9801 | ValLoss: 0.1165 ValAcc: 0.9519
+Ep 5/50 | TrLoss: 0.0582 TrAcc: 0.9847 | ValLoss: 0.0171 ValAcc: 0.9978
+Ep 6/50 | TrLoss: 0.0323 TrAcc: 0.9911 | ValLoss: 0.0199 ValAcc: 0.9967
+Ep 7/50 | TrLoss: 0.0183 TrAcc: 0.9958 | ValLoss: 0.0129 ValAcc: 0.9978
+Ep 8/50 | TrLoss: 0.0114 TrAcc: 0.9980 | ValLoss: 0.0127 ValAcc: 0.9978
+Ep 9/50 | TrLoss: 0.0098 TrAcc: 0.9974 | ValLoss: 0.0116 ValAcc: 0.9978
+Ep 10/50 | TrLoss: 0.0068 TrAcc: 0.9988 | ValLoss: 0.0130 ValAcc: 0.9973
+Ep 11/50 | TrLoss: 0.0038 TrAcc: 0.9995 | ValLoss: 0.0121 ValAcc: 0.9967
+Ep 12/50 | TrLoss: 0.0033 TrAcc: 0.9993 | ValLoss: 0.0154 ValAcc: 0.9978
+Ep 13/50 | TrLoss: 0.0038 TrAcc: 0.9993 | ValLoss: 0.0127 ValAcc: 0.9984
+Ep 14/50 | TrLoss: 0.0020 TrAcc: 0.9997 | ValLoss: 0.0159 ValAcc: 0.9956
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       1.00      1.00      1.00      1767
+     Seizure       0.91      0.97      0.94        64
+
+    accuracy                           1.00      1831
+   macro avg       0.96      0.98      0.97      1831
+weighted avg       1.00      1.00      1.00      1831
+
+
+=== Paciente chb03 ===
+--- [Personalized] Cargando: chb03 ---
+   Train: 22019 | Val: 5505 | Crisis Train: 2240 | Crisis Val: 920
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3200 TrAcc: 0.9243 | ValLoss: 0.2072 ValAcc: 0.9021
+Ep 2/50 | TrLoss: 0.0473 TrAcc: 0.9870 | ValLoss: 0.0913 ValAcc: 0.9639
+Ep 3/50 | TrLoss: 0.0236 TrAcc: 0.9924 | ValLoss: 0.1462 ValAcc: 0.9342
+Ep 4/50 | TrLoss: 0.0132 TrAcc: 0.9963 | ValLoss: 0.0515 ValAcc: 0.9838
+Ep 5/50 | TrLoss: 0.0077 TrAcc: 0.9980 | ValLoss: 0.0954 ValAcc: 0.9660
+Ep 6/50 | TrLoss: 0.0044 TrAcc: 0.9987 | ValLoss: 0.1653 ValAcc: 0.9446
+Ep 7/50 | TrLoss: 0.0025 TrAcc: 0.9994 | ValLoss: 0.1651 ValAcc: 0.9468
+Ep 8/50 | TrLoss: 0.0019 TrAcc: 0.9995 | ValLoss: 0.2767 ValAcc: 0.9293
+Ep 9/50 | TrLoss: 0.0014 TrAcc: 0.9996 | ValLoss: 0.0452 ValAcc: 0.9882
+Ep 10/50 | TrLoss: 0.0009 TrAcc: 0.9999 | ValLoss: 0.1977 ValAcc: 0.9468
+Ep 11/50 | TrLoss: 0.0056 TrAcc: 0.9980 | ValLoss: 0.0393 ValAcc: 0.9900
+Ep 12/50 | TrLoss: 0.0018 TrAcc: 0.9995 | ValLoss: 0.0821 ValAcc: 0.9709
+Ep 13/50 | TrLoss: 0.0004 TrAcc: 1.0000 | ValLoss: 0.1105 ValAcc: 0.9662
+Ep 14/50 | TrLoss: 0.0002 TrAcc: 1.0000 | ValLoss: 0.0859 ValAcc: 0.9738
+Ep 15/50 | TrLoss: 0.0002 TrAcc: 1.0000 | ValLoss: 0.1691 ValAcc: 0.9546
+Ep 16/50 | TrLoss: 0.0001 TrAcc: 1.0000 | ValLoss: 0.1577 ValAcc: 0.9608
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.96      1.00      0.98      4585
+     Seizure       1.00      0.77      0.87       920
+
+    accuracy                           0.96      5505
+   macro avg       0.98      0.88      0.92      5505
+weighted avg       0.96      0.96      0.96      5505
+
+
+=== Paciente chb04 ===
+--- [Personalized] Cargando: chb04 ---
+   Train: 17488 | Val: 4372 | Crisis Train: 1264 | Crisis Val: 1728
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4276 TrAcc: 0.9037 | ValLoss: 1.1065 ValAcc: 0.6048
+Ep 2/50 | TrLoss: 0.1959 TrAcc: 0.9277 | ValLoss: 1.3869 ValAcc: 0.6048
+Ep 3/50 | TrLoss: 0.1077 TrAcc: 0.9466 | ValLoss: 2.0712 ValAcc: 0.6297
+Ep 4/50 | TrLoss: 0.0588 TrAcc: 0.9878 | ValLoss: 2.2411 ValAcc: 0.6482
+Ep 5/50 | TrLoss: 0.0227 TrAcc: 0.9950 | ValLoss: 2.3730 ValAcc: 0.6532
+Ep 6/50 | TrLoss: 0.0153 TrAcc: 0.9971 | ValLoss: 2.3385 ValAcc: 0.6530
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.64      1.00      0.78      2644
+     Seizure       1.00      0.12      0.22      1728
+
+    accuracy                           0.65      4372
+   macro avg       0.82      0.56      0.50      4372
+weighted avg       0.78      0.65      0.56      4372
+
+
+=== Paciente chb05 ===
+--- [Personalized] Cargando: chb05 ---
+   Train: 10393 | Val: 2599 | Crisis Train: 3496 | Crisis Val: 928
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5325 TrAcc: 0.8930 | ValLoss: 0.4828 ValAcc: 0.8669
+Ep 2/50 | TrLoss: 0.2333 TrAcc: 0.9435 | ValLoss: 0.5491 ValAcc: 0.8753
+Ep 3/50 | TrLoss: 0.0682 TrAcc: 0.9822 | ValLoss: 0.6978 ValAcc: 0.8996
+Ep 4/50 | TrLoss: 0.0476 TrAcc: 0.9854 | ValLoss: 0.2681 ValAcc: 0.8711
+Ep 5/50 | TrLoss: 0.0326 TrAcc: 0.9910 | ValLoss: 0.1405 ValAcc: 0.9796
+Ep 6/50 | TrLoss: 0.0261 TrAcc: 0.9927 | ValLoss: 0.1357 ValAcc: 0.9827
+Ep 7/50 | TrLoss: 0.0188 TrAcc: 0.9943 | ValLoss: 0.1004 ValAcc: 0.9858
+Ep 8/50 | TrLoss: 0.0137 TrAcc: 0.9964 | ValLoss: 0.1792 ValAcc: 0.9785
+Ep 9/50 | TrLoss: 0.0112 TrAcc: 0.9967 | ValLoss: 0.1844 ValAcc: 0.9811
+Ep 10/50 | TrLoss: 0.0082 TrAcc: 0.9978 | ValLoss: 0.0980 ValAcc: 0.9854
+Ep 11/50 | TrLoss: 0.0069 TrAcc: 0.9981 | ValLoss: 0.1163 ValAcc: 0.9873
+Ep 12/50 | TrLoss: 0.0065 TrAcc: 0.9986 | ValLoss: 0.1426 ValAcc: 0.9531
+Ep 13/50 | TrLoss: 0.0027 TrAcc: 0.9995 | ValLoss: 0.1333 ValAcc: 0.9627
+Ep 14/50 | TrLoss: 0.0048 TrAcc: 0.9985 | ValLoss: 0.0949 ValAcc: 0.9754
+Ep 15/50 | TrLoss: 0.0048 TrAcc: 0.9988 | ValLoss: 0.2616 ValAcc: 0.9811
+Ep 16/50 | TrLoss: 0.0097 TrAcc: 0.9965 | ValLoss: 0.8732 ValAcc: 0.7434
+Ep 17/50 | TrLoss: 0.0049 TrAcc: 0.9987 | ValLoss: 0.1247 ValAcc: 0.9850
+Ep 18/50 | TrLoss: 0.0018 TrAcc: 0.9997 | ValLoss: 0.2548 ValAcc: 0.9815
+Ep 19/50 | TrLoss: 0.0031 TrAcc: 0.9990 | ValLoss: 0.1287 ValAcc: 0.9885
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.99      0.99      1671
+     Seizure       0.98      0.98      0.98       928
+
+    accuracy                           0.99      2599
+   macro avg       0.99      0.99      0.99      2599
+weighted avg       0.99      0.99      0.99      2599
+
+
+=== Paciente chb06 ===
+--- [Personalized] Cargando: chb06 ---
+   Train: 37896 | Val: 9474 | Crisis Train: 936 | Crisis Val: 208
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2185 TrAcc: 0.9627 | ValLoss: 0.1511 ValAcc: 0.9780
+Ep 2/50 | TrLoss: 0.0962 TrAcc: 0.9753 | ValLoss: 0.1109 ValAcc: 0.9780
+Ep 3/50 | TrLoss: 0.0477 TrAcc: 0.9819 | ValLoss: 0.0679 ValAcc: 0.9867
+Ep 4/50 | TrLoss: 0.0157 TrAcc: 0.9961 | ValLoss: 0.0649 ValAcc: 0.9903
+Ep 5/50 | TrLoss: 0.0068 TrAcc: 0.9982 | ValLoss: 0.0428 ValAcc: 0.9925
+Ep 6/50 | TrLoss: 0.0028 TrAcc: 0.9994 | ValLoss: 0.0386 ValAcc: 0.9926
+Ep 7/50 | TrLoss: 0.0020 TrAcc: 0.9995 | ValLoss: 0.0536 ValAcc: 0.9923
+Ep 8/50 | TrLoss: 0.0008 TrAcc: 0.9999 | ValLoss: 0.0704 ValAcc: 0.9909
+Ep 9/50 | TrLoss: 0.0004 TrAcc: 0.9999 | ValLoss: 0.0714 ValAcc: 0.9909
+Ep 10/50 | TrLoss: 0.0024 TrAcc: 0.9991 | ValLoss: 0.0522 ValAcc: 0.9904
+Ep 11/50 | TrLoss: 0.0012 TrAcc: 0.9997 | ValLoss: 0.0526 ValAcc: 0.9930
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      1.00      1.00      9266
+     Seizure       0.93      0.74      0.82       208
+
+    accuracy                           0.99      9474
+   macro avg       0.96      0.87      0.91      9474
+weighted avg       0.99      0.99      0.99      9474
+
+
+=== Paciente chb07 ===
+--- [Personalized] Cargando: chb07 ---
+   Train: 14872 | Val: 3719 | Crisis Train: 1440 | Crisis Val: 1136
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3948 TrAcc: 0.9459 | ValLoss: 0.4330 ValAcc: 0.8637
+Ep 2/50 | TrLoss: 0.0770 TrAcc: 0.9832 | ValLoss: 0.7760 ValAcc: 0.8664
+Ep 3/50 | TrLoss: 0.0268 TrAcc: 0.9922 | ValLoss: 0.2713 ValAcc: 0.9540
+Ep 4/50 | TrLoss: 0.0145 TrAcc: 0.9954 | ValLoss: 0.6988 ValAcc: 0.9309
+Ep 5/50 | TrLoss: 0.0083 TrAcc: 0.9976 | ValLoss: 1.0132 ValAcc: 0.9072
+Ep 6/50 | TrLoss: 0.0037 TrAcc: 0.9993 | ValLoss: 0.9690 ValAcc: 0.9242
+Ep 7/50 | TrLoss: 0.0023 TrAcc: 0.9997 | ValLoss: 1.3116 ValAcc: 0.8900
+Ep 8/50 | TrLoss: 0.0041 TrAcc: 0.9986 | ValLoss: 1.2527 ValAcc: 0.8976
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.87      1.00      0.93      2583
+     Seizure       1.00      0.67      0.80      1136
+
+    accuracy                           0.90      3719
+   macro avg       0.93      0.83      0.87      3719
+weighted avg       0.91      0.90      0.89      3719
+
+
+=== Paciente chb08 ===
+--- [Personalized] Cargando: chb08 ---
+   Train: 12560 | Val: 3140 | Crisis Train: 5208 | Crisis Val: 2104
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5577 TrAcc: 0.7717 | ValLoss: 0.5198 ValAcc: 0.7732
+Ep 2/50 | TrLoss: 0.3067 TrAcc: 0.8913 | ValLoss: 1.0636 ValAcc: 0.5822
+Ep 3/50 | TrLoss: 0.2078 TrAcc: 0.9252 | ValLoss: 0.4870 ValAcc: 0.8150
+Ep 4/50 | TrLoss: 0.1636 TrAcc: 0.9426 | ValLoss: 0.4057 ValAcc: 0.8519
+Ep 5/50 | TrLoss: 0.1226 TrAcc: 0.9563 | ValLoss: 0.5865 ValAcc: 0.8166
+Ep 6/50 | TrLoss: 0.1016 TrAcc: 0.9652 | ValLoss: 0.2693 ValAcc: 0.8939
+Ep 7/50 | TrLoss: 0.0747 TrAcc: 0.9748 | ValLoss: 0.3471 ValAcc: 0.8882
+Ep 8/50 | TrLoss: 0.0685 TrAcc: 0.9776 | ValLoss: 0.3013 ValAcc: 0.8981
+Ep 9/50 | TrLoss: 0.0508 TrAcc: 0.9843 | ValLoss: 0.8240 ValAcc: 0.8127
+Ep 10/50 | TrLoss: 0.0420 TrAcc: 0.9874 | ValLoss: 0.5906 ValAcc: 0.8583
+Ep 11/50 | TrLoss: 0.0406 TrAcc: 0.9883 | ValLoss: 0.3813 ValAcc: 0.8955
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.90      0.77      0.83      1036
+     Seizure       0.89      0.96      0.92      2104
+
+    accuracy                           0.90      3140
+   macro avg       0.90      0.86      0.88      3140
+weighted avg       0.90      0.90      0.89      3140
+
+
+=== Paciente chb09 ===
+--- [Personalized] Cargando: chb09 ---
+   Train: 15332 | Val: 3833 | Crisis Train: 1131 | Crisis Val: 1045
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4576 TrAcc: 0.8816 | ValLoss: 0.3879 ValAcc: 0.8870
+Ep 2/50 | TrLoss: 0.0918 TrAcc: 0.9798 | ValLoss: 0.1902 ValAcc: 0.9682
+Ep 3/50 | TrLoss: 0.0248 TrAcc: 0.9952 | ValLoss: 0.1347 ValAcc: 0.9825
+Ep 4/50 | TrLoss: 0.0114 TrAcc: 0.9977 | ValLoss: 0.1648 ValAcc: 0.9650
+Ep 5/50 | TrLoss: 0.0057 TrAcc: 0.9989 | ValLoss: 0.1924 ValAcc: 0.9580
+Ep 6/50 | TrLoss: 0.0040 TrAcc: 0.9992 | ValLoss: 0.1450 ValAcc: 0.9838
+Ep 7/50 | TrLoss: 0.0026 TrAcc: 0.9995 | ValLoss: 0.1467 ValAcc: 0.9823
+Ep 8/50 | TrLoss: 0.0020 TrAcc: 0.9997 | ValLoss: 0.1524 ValAcc: 0.9836
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.99      0.99      2788
+     Seizure       0.98      0.96      0.97      1045
+
+    accuracy                           0.98      3833
+   macro avg       0.98      0.98      0.98      3833
+weighted avg       0.98      0.98      0.98      3833
+
+
+=== Paciente chb10 ===
+--- [Personalized] Cargando: chb10 ---
+   Train: 22652 | Val: 5663 | Crisis Train: 2392 | Crisis Val: 1128
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3407 TrAcc: 0.8968 | ValLoss: 0.5423 ValAcc: 0.8999
+Ep 2/50 | TrLoss: 0.0781 TrAcc: 0.9772 | ValLoss: 0.4396 ValAcc: 0.9717
+Ep 3/50 | TrLoss: 0.0221 TrAcc: 0.9954 | ValLoss: 0.5947 ValAcc: 0.9661
+Ep 4/50 | TrLoss: 0.0103 TrAcc: 0.9978 | ValLoss: 0.5875 ValAcc: 0.9725
+Ep 5/50 | TrLoss: 0.0068 TrAcc: 0.9985 | ValLoss: 0.6723 ValAcc: 0.9726
+Ep 6/50 | TrLoss: 0.0035 TrAcc: 0.9992 | ValLoss: 0.7401 ValAcc: 0.9689
+Ep 7/50 | TrLoss: 0.0021 TrAcc: 0.9996 | ValLoss: 0.7114 ValAcc: 0.9728
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.97      1.00      0.98      4535
+     Seizure       0.99      0.87      0.93      1128
+
+    accuracy                           0.97      5663
+   macro avg       0.98      0.93      0.96      5663
+weighted avg       0.97      0.97      0.97      5663
+
+
+=== Paciente chb11 ===
+--- [Personalized] Cargando: chb11 ---
+   Train: 8767 | Val: 2192 | Crisis Train: 4232 | Crisis Val: 2192
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5161 TrAcc: 0.8746 | ValLoss: 0.3898 ValAcc: 0.9197
+Ep 2/50 | TrLoss: 0.2609 TrAcc: 0.9358 | ValLoss: 0.8234 ValAcc: 0.7094
+Ep 3/50 | TrLoss: 0.0800 TrAcc: 0.9824 | ValLoss: 0.9019 ValAcc: 0.8960
+Ep 4/50 | TrLoss: 0.0389 TrAcc: 0.9885 | ValLoss: 0.8809 ValAcc: 0.9133
+Ep 5/50 | TrLoss: 0.0210 TrAcc: 0.9938 | ValLoss: 0.7554 ValAcc: 0.9243
+Ep 6/50 | TrLoss: 0.0156 TrAcc: 0.9957 | ValLoss: 0.9348 ValAcc: 0.9183
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.00      0.00      0.00         0
+     Seizure       1.00      0.92      0.96      2192
+
+    accuracy                           0.92      2192
+   macro avg       0.50      0.46      0.48      2192
+weighted avg       1.00      0.92      0.96      2192
+
+
+=== Paciente chb12 ===
+--- [Personalized] Cargando: chb12 ---
+   Train: 19048 | Val: 4762 | Crisis Train: 4992 | Crisis Val: 2704
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5377 TrAcc: 0.7457 | ValLoss: 1.0513 ValAcc: 0.4448
+Ep 2/50 | TrLoss: 0.2798 TrAcc: 0.8976 | ValLoss: 0.5284 ValAcc: 0.8123
+Ep 3/50 | TrLoss: 0.1738 TrAcc: 0.9351 | ValLoss: 0.3370 ValAcc: 0.8740
+Ep 4/50 | TrLoss: 0.1223 TrAcc: 0.9562 | ValLoss: 0.4624 ValAcc: 0.8496
+Ep 5/50 | TrLoss: 0.0791 TrAcc: 0.9749 | ValLoss: 1.1796 ValAcc: 0.7155
+Ep 6/50 | TrLoss: 0.0733 TrAcc: 0.9746 | ValLoss: 0.5538 ValAcc: 0.8436
+Ep 7/50 | TrLoss: 0.0556 TrAcc: 0.9825 | ValLoss: 0.4697 ValAcc: 0.8637
+Ep 8/50 | TrLoss: 0.0292 TrAcc: 0.9919 | ValLoss: 0.5573 ValAcc: 0.8568
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.76      0.99      0.86      2058
+     Seizure       0.99      0.76      0.86      2704
+
+    accuracy                           0.86      4762
+   macro avg       0.87      0.87      0.86      4762
+weighted avg       0.89      0.86      0.86      4762
+
+
+=== Paciente chb13 ===
+--- [Personalized] Cargando: chb13 ---
+   Train: 22066 | Val: 5517 | Crisis Train: 1800 | Crisis Val: 1640
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3489 TrAcc: 0.9184 | ValLoss: 0.7209 ValAcc: 0.7027
+Ep 2/50 | TrLoss: 0.2245 TrAcc: 0.9185 | ValLoss: 0.6439 ValAcc: 0.7027
+Ep 3/50 | TrLoss: 0.1010 TrAcc: 0.9653 | ValLoss: 0.6633 ValAcc: 0.8394
+Ep 4/50 | TrLoss: 0.0603 TrAcc: 0.9793 | ValLoss: 0.7372 ValAcc: 0.8407
+Ep 5/50 | TrLoss: 0.0420 TrAcc: 0.9860 | ValLoss: 0.7177 ValAcc: 0.8501
+Ep 6/50 | TrLoss: 0.0304 TrAcc: 0.9908 | ValLoss: 0.9413 ValAcc: 0.8153
+Ep 7/50 | TrLoss: 0.0224 TrAcc: 0.9935 | ValLoss: 1.1254 ValAcc: 0.7923
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.77      1.00      0.87      3877
+     Seizure       0.98      0.31      0.47      1640
+
+    accuracy                           0.79      5517
+   macro avg       0.88      0.65      0.67      5517
+weighted avg       0.84      0.79      0.75      5517
+
+
+=== Paciente chb14 ===
+--- [Personalized] Cargando: chb14 ---
+   Train: 20659 | Val: 5165 | Crisis Train: 1000 | Crisis Val: 288
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2921 TrAcc: 0.9430 | ValLoss: 0.4555 ValAcc: 0.9442
+Ep 2/50 | TrLoss: 0.1527 TrAcc: 0.9516 | ValLoss: 0.3294 ValAcc: 0.9442
+Ep 3/50 | TrLoss: 0.0873 TrAcc: 0.9667 | ValLoss: 0.3331 ValAcc: 0.9719
+Ep 4/50 | TrLoss: 0.0544 TrAcc: 0.9862 | ValLoss: 0.3830 ValAcc: 0.9721
+Ep 5/50 | TrLoss: 0.0409 TrAcc: 0.9875 | ValLoss: 0.2378 ValAcc: 0.9791
+Ep 6/50 | TrLoss: 0.0211 TrAcc: 0.9938 | ValLoss: 0.3128 ValAcc: 0.9770
+Ep 7/50 | TrLoss: 0.0129 TrAcc: 0.9963 | ValLoss: 0.3614 ValAcc: 0.9712
+Ep 8/50 | TrLoss: 0.0136 TrAcc: 0.9957 | ValLoss: 0.3971 ValAcc: 0.9723
+Ep 9/50 | TrLoss: 0.0089 TrAcc: 0.9972 | ValLoss: 0.3990 ValAcc: 0.9733
+Ep 10/50 | TrLoss: 0.0042 TrAcc: 0.9988 | ValLoss: 0.4036 ValAcc: 0.9741
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.97      1.00      0.99      4877
+     Seizure       0.95      0.56      0.71       288
+
+    accuracy                           0.97      5165
+   macro avg       0.96      0.78      0.85      5165
+weighted avg       0.97      0.97      0.97      5165
+
+
+=== Paciente chb15 ===
+--- [Personalized] Cargando: chb15 ---
+   Train: 50387 | Val: 12597 | Crisis Train: 11152 | Crisis Val: 4624
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2683 TrAcc: 0.8948 | ValLoss: 0.1676 ValAcc: 0.9557
+Ep 2/50 | TrLoss: 0.0438 TrAcc: 0.9863 | ValLoss: 0.1711 ValAcc: 0.9585
+Ep 3/50 | TrLoss: 0.0257 TrAcc: 0.9920 | ValLoss: 0.2890 ValAcc: 0.9414
+Ep 4/50 | TrLoss: 0.0179 TrAcc: 0.9943 | ValLoss: 0.1824 ValAcc: 0.9628
+Ep 5/50 | TrLoss: 0.0140 TrAcc: 0.9954 | ValLoss: 0.2755 ValAcc: 0.9522
+Ep 6/50 | TrLoss: 0.0103 TrAcc: 0.9968 | ValLoss: 0.2620 ValAcc: 0.9548
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.93      1.00      0.97      7973
+     Seizure       1.00      0.88      0.93      4624
+
+    accuracy                           0.95     12597
+   macro avg       0.97      0.94      0.95     12597
+weighted avg       0.96      0.95      0.95     12597
+
+
+=== Paciente chb16 ===
+--- [Personalized] Cargando: chb16 ---
+   Train: 14340 | Val: 3586 | Crisis Train: 232 | Crisis Val: 256
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4799 TrAcc: 0.8469 | ValLoss: 0.5065 ValAcc: 0.9286
+Ep 2/50 | TrLoss: 0.0956 TrAcc: 0.9838 | ValLoss: 0.8461 ValAcc: 0.9286
+Ep 3/50 | TrLoss: 0.0799 TrAcc: 0.9838 | ValLoss: 0.7710 ValAcc: 0.9286
+Ep 4/50 | TrLoss: 0.0773 TrAcc: 0.9838 | ValLoss: 0.7401 ValAcc: 0.9286
+Ep 5/50 | TrLoss: 0.0714 TrAcc: 0.9838 | ValLoss: 0.7037 ValAcc: 0.9286
+Ep 6/50 | TrLoss: 0.0560 TrAcc: 0.9838 | ValLoss: 0.8143 ValAcc: 0.9286
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.93      1.00      0.96      3330
+     Seizure       0.00      0.00      0.00       256
+
+    accuracy                           0.93      3586
+   macro avg       0.46      0.50      0.48      3586
+weighted avg       0.86      0.93      0.89      3586
+
+
+=== Paciente chb17 ===
+--- [Personalized] Cargando: chb17 ---
+   Train: 10132 | Val: 2533 | Crisis Train: 1624 | Crisis Val: 696
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5099 TrAcc: 0.8372 | ValLoss: 0.5188 ValAcc: 0.7252
+Ep 2/50 | TrLoss: 0.3066 TrAcc: 0.8758 | ValLoss: 0.5631 ValAcc: 0.7252
+Ep 3/50 | TrLoss: 0.1538 TrAcc: 0.9522 | ValLoss: 0.4994 ValAcc: 0.8429
+Ep 4/50 | TrLoss: 0.0634 TrAcc: 0.9808 | ValLoss: 0.2688 ValAcc: 0.9135
+Ep 5/50 | TrLoss: 0.0388 TrAcc: 0.9894 | ValLoss: 0.2342 ValAcc: 0.9262
+Ep 6/50 | TrLoss: 0.0253 TrAcc: 0.9931 | ValLoss: 0.2331 ValAcc: 0.9285
+Ep 7/50 | TrLoss: 0.0174 TrAcc: 0.9947 | ValLoss: 0.3012 ValAcc: 0.9147
+Ep 8/50 | TrLoss: 0.0151 TrAcc: 0.9952 | ValLoss: 0.4173 ValAcc: 0.8942
+Ep 9/50 | TrLoss: 0.0091 TrAcc: 0.9971 | ValLoss: 0.2367 ValAcc: 0.9317
+Ep 10/50 | TrLoss: 0.0064 TrAcc: 0.9986 | ValLoss: 0.3303 ValAcc: 0.9167
+Ep 11/50 | TrLoss: 0.0040 TrAcc: 0.9993 | ValLoss: 0.4762 ValAcc: 0.8993
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.88      0.99      0.93      1837
+     Seizure       0.97      0.65      0.78       696
+
+    accuracy                           0.90      2533
+   macro avg       0.93      0.82      0.86      2533
+weighted avg       0.91      0.90      0.89      2533
+
+
+=== Paciente chb18 ===
+--- [Personalized] Cargando: chb18 ---
+   Train: 17658 | Val: 4415 | Crisis Train: 1592 | Crisis Val: 896
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4958 TrAcc: 0.8448 | ValLoss: 0.4769 ValAcc: 0.7971
+Ep 2/50 | TrLoss: 0.1684 TrAcc: 0.9410 | ValLoss: 0.5387 ValAcc: 0.8458
+Ep 3/50 | TrLoss: 0.0969 TrAcc: 0.9729 | ValLoss: 0.5011 ValAcc: 0.8195
+Ep 4/50 | TrLoss: 0.0707 TrAcc: 0.9823 | ValLoss: 0.5485 ValAcc: 0.8367
+Ep 5/50 | TrLoss: 0.0583 TrAcc: 0.9858 | ValLoss: 0.5314 ValAcc: 0.8598
+Ep 6/50 | TrLoss: 0.0517 TrAcc: 0.9868 | ValLoss: 0.6077 ValAcc: 0.8618
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.87      0.97      0.92      3519
+     Seizure       0.80      0.42      0.55       896
+
+    accuracy                           0.86      4415
+   macro avg       0.84      0.70      0.74      4415
+weighted avg       0.86      0.86      0.84      4415
+
+
+=== Paciente chb19 ===
+--- [Personalized] Cargando: chb19 ---
+   Train: 9590 | Val: 2398 | Crisis Train: 1224 | Crisis Val: 640
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5349 TrAcc: 0.8879 | ValLoss: 0.4580 ValAcc: 0.9162
+Ep 2/50 | TrLoss: 0.2317 TrAcc: 0.9492 | ValLoss: 0.2895 ValAcc: 0.9124
+Ep 3/50 | TrLoss: 0.1374 TrAcc: 0.9554 | ValLoss: 0.2528 ValAcc: 0.9162
+Ep 4/50 | TrLoss: 0.0885 TrAcc: 0.9712 | ValLoss: 0.1520 ValAcc: 0.9500
+Ep 5/50 | TrLoss: 0.0517 TrAcc: 0.9854 | ValLoss: 0.1383 ValAcc: 0.9629
+Ep 6/50 | TrLoss: 0.0428 TrAcc: 0.9863 | ValLoss: 0.1501 ValAcc: 0.9595
+Ep 7/50 | TrLoss: 0.0262 TrAcc: 0.9929 | ValLoss: 0.1237 ValAcc: 0.9646
+Ep 8/50 | TrLoss: 0.0202 TrAcc: 0.9935 | ValLoss: 0.1544 ValAcc: 0.9662
+Ep 9/50 | TrLoss: 0.0113 TrAcc: 0.9972 | ValLoss: 0.1507 ValAcc: 0.9691
+Ep 10/50 | TrLoss: 0.0090 TrAcc: 0.9975 | ValLoss: 0.2200 ValAcc: 0.9566
+Ep 11/50 | TrLoss: 0.0060 TrAcc: 0.9990 | ValLoss: 0.1302 ValAcc: 0.9750
+Ep 12/50 | TrLoss: 0.0133 TrAcc: 0.9953 | ValLoss: 0.2154 ValAcc: 0.9621
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.95      1.00      0.97      1758
+     Seizure       1.00      0.86      0.92       640
+
+    accuracy                           0.96      2398
+   macro avg       0.97      0.93      0.95      2398
+weighted avg       0.96      0.96      0.96      2398
+
+
+=== Paciente chb20 ===
+--- [Personalized] Cargando: chb20 ---
+   Train: 17228 | Val: 4308 | Crisis Train: 1712 | Crisis Val: 576
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3548 TrAcc: 0.8663 | ValLoss: 0.2002 ValAcc: 0.9438
+Ep 2/50 | TrLoss: 0.0713 TrAcc: 0.9801 | ValLoss: 0.2253 ValAcc: 0.9143
+Ep 3/50 | TrLoss: 0.0395 TrAcc: 0.9866 | ValLoss: 0.2456 ValAcc: 0.8893
+Ep 4/50 | TrLoss: 0.0304 TrAcc: 0.9891 | ValLoss: 0.2148 ValAcc: 0.8990
+Ep 5/50 | TrLoss: 0.0231 TrAcc: 0.9919 | ValLoss: 0.2008 ValAcc: 0.9188
+Ep 6/50 | TrLoss: 0.0170 TrAcc: 0.9949 | ValLoss: 0.1982 ValAcc: 0.9095
+Ep 7/50 | TrLoss: 0.0117 TrAcc: 0.9963 | ValLoss: 0.2333 ValAcc: 0.9153
+Ep 8/50 | TrLoss: 0.0071 TrAcc: 0.9979 | ValLoss: 0.2290 ValAcc: 0.9278
+Ep 9/50 | TrLoss: 0.0039 TrAcc: 0.9990 | ValLoss: 0.2202 ValAcc: 0.9325
+Ep 10/50 | TrLoss: 0.0021 TrAcc: 0.9997 | ValLoss: 0.2529 ValAcc: 0.9396
+Ep 11/50 | TrLoss: 0.0019 TrAcc: 0.9997 | ValLoss: 0.2499 ValAcc: 0.9417
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.96      0.97      0.97      3732
+     Seizure       0.79      0.76      0.78       576
+
+    accuracy                           0.94      4308
+   macro avg       0.88      0.87      0.87      4308
+weighted avg       0.94      0.94      0.94      4308
+
+
+=== Paciente chb21 ===
+--- [Personalized] Cargando: chb21 ---
+   Train: 11922 | Val: 2981 | Crisis Train: 1472 | Crisis Val: 88
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5045 TrAcc: 0.8187 | ValLoss: 0.2827 ValAcc: 0.9705
+Ep 2/50 | TrLoss: 0.3349 TrAcc: 0.8765 | ValLoss: 0.1533 ValAcc: 0.9705
+Ep 3/50 | TrLoss: 0.2326 TrAcc: 0.8938 | ValLoss: 0.0773 ValAcc: 0.9782
+Ep 4/50 | TrLoss: 0.1085 TrAcc: 0.9662 | ValLoss: 0.0467 ValAcc: 0.9852
+Ep 5/50 | TrLoss: 0.0681 TrAcc: 0.9761 | ValLoss: 0.0382 ValAcc: 0.9873
+Ep 6/50 | TrLoss: 0.0395 TrAcc: 0.9883 | ValLoss: 0.0405 ValAcc: 0.9859
+Ep 7/50 | TrLoss: 0.0314 TrAcc: 0.9904 | ValLoss: 0.0348 ValAcc: 0.9913
+Ep 8/50 | TrLoss: 0.0212 TrAcc: 0.9931 | ValLoss: 0.0338 ValAcc: 0.9923
+Ep 9/50 | TrLoss: 0.0161 TrAcc: 0.9949 | ValLoss: 0.0348 ValAcc: 0.9889
+Ep 10/50 | TrLoss: 0.0151 TrAcc: 0.9955 | ValLoss: 0.0590 ValAcc: 0.9772
+Ep 11/50 | TrLoss: 0.0119 TrAcc: 0.9967 | ValLoss: 0.0350 ValAcc: 0.9913
+Ep 12/50 | TrLoss: 0.0068 TrAcc: 0.9984 | ValLoss: 0.0393 ValAcc: 0.9913
+Ep 13/50 | TrLoss: 0.0050 TrAcc: 0.9989 | ValLoss: 0.0438 ValAcc: 0.9919
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      1.00      1.00      2893
+     Seizure       0.92      0.80      0.85        88
+
+    accuracy                           0.99      2981
+   macro avg       0.96      0.90      0.92      2981
+weighted avg       0.99      0.99      0.99      2981
+
+
+=== Paciente chb22 ===
+--- [Personalized] Cargando: chb22 ---
+   Train: 9614 | Val: 2404 | Crisis Train: 1040 | Crisis Val: 568
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4674 TrAcc: 0.8916 | ValLoss: 0.5031 ValAcc: 0.7637
+Ep 2/50 | TrLoss: 0.1975 TrAcc: 0.9300 | ValLoss: 0.2560 ValAcc: 0.8973
+Ep 3/50 | TrLoss: 0.0763 TrAcc: 0.9809 | ValLoss: 0.1771 ValAcc: 0.9455
+Ep 4/50 | TrLoss: 0.0236 TrAcc: 0.9955 | ValLoss: 0.1843 ValAcc: 0.9513
+Ep 5/50 | TrLoss: 0.0118 TrAcc: 0.9973 | ValLoss: 0.2815 ValAcc: 0.9355
+Ep 6/50 | TrLoss: 0.0062 TrAcc: 0.9991 | ValLoss: 0.2412 ValAcc: 0.9493
+Ep 7/50 | TrLoss: 0.0037 TrAcc: 0.9997 | ValLoss: 0.1447 ValAcc: 0.9684
+Ep 8/50 | TrLoss: 0.0051 TrAcc: 0.9983 | ValLoss: 0.3148 ValAcc: 0.9359
+Ep 9/50 | TrLoss: 0.0023 TrAcc: 0.9998 | ValLoss: 0.3051 ValAcc: 0.9413
+Ep 10/50 | TrLoss: 0.0014 TrAcc: 0.9998 | ValLoss: 0.2712 ValAcc: 0.9493
+Ep 11/50 | TrLoss: 0.0009 TrAcc: 1.0000 | ValLoss: 0.2891 ValAcc: 0.9488
+Ep 12/50 | TrLoss: 0.0007 TrAcc: 1.0000 | ValLoss: 0.3107 ValAcc: 0.9484
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.94      1.00      0.97      1836
+     Seizure       1.00      0.79      0.88       568
+
+    accuracy                           0.95      2404
+   macro avg       0.97      0.89      0.92      2404
+weighted avg       0.95      0.95      0.95      2404
+
+
+=== Paciente chb23 ===
+--- [Personalized] Cargando: chb23 ---
+   Train: 27788 | Val: 6948 | Crisis Train: 1416 | Crisis Val: 1920
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2807 TrAcc: 0.9157 | ValLoss: 0.4435 ValAcc: 0.8421
+Ep 2/50 | TrLoss: 0.0467 TrAcc: 0.9847 | ValLoss: 0.3310 ValAcc: 0.9017
+Ep 3/50 | TrLoss: 0.0285 TrAcc: 0.9908 | ValLoss: 0.1789 ValAcc: 0.9503
+Ep 4/50 | TrLoss: 0.0230 TrAcc: 0.9922 | ValLoss: 0.0952 ValAcc: 0.9810
+Ep 5/50 | TrLoss: 0.0187 TrAcc: 0.9944 | ValLoss: 0.3013 ValAcc: 0.9236
+Ep 6/50 | TrLoss: 0.0165 TrAcc: 0.9950 | ValLoss: 0.0880 ValAcc: 0.9853
+Ep 7/50 | TrLoss: 0.0149 TrAcc: 0.9956 | ValLoss: 0.2257 ValAcc: 0.9511
+Ep 8/50 | TrLoss: 0.0130 TrAcc: 0.9966 | ValLoss: 0.1925 ValAcc: 0.9645
+Ep 9/50 | TrLoss: 0.0115 TrAcc: 0.9965 | ValLoss: 0.3781 ValAcc: 0.9269
+Ep 10/50 | TrLoss: 0.0091 TrAcc: 0.9976 | ValLoss: 0.4007 ValAcc: 0.9224
+Ep 11/50 | TrLoss: 0.0082 TrAcc: 0.9973 | ValLoss: 0.3087 ValAcc: 0.9452
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.93      1.00      0.96      5028
+     Seizure       1.00      0.80      0.89      1920
+
+    accuracy                           0.95      6948
+   macro avg       0.96      0.90      0.93      6948
+weighted avg       0.95      0.95      0.94      6948
+
+
+=== Paciente chb24 ===
+--- [Personalized] Cargando: chb24 ---
+   Train: 36560 | Val: 9141 | Crisis Train: 2776 | Crisis Val: 1184
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2531 TrAcc: 0.9441 | ValLoss: 0.1361 ValAcc: 0.9642
+Ep 2/50 | TrLoss: 0.1483 TrAcc: 0.9595 | ValLoss: 0.1692 ValAcc: 0.9359
+Ep 3/50 | TrLoss: 0.1221 TrAcc: 0.9668 | ValLoss: 0.1868 ValAcc: 0.9370
+Ep 4/50 | TrLoss: 0.1041 TrAcc: 0.9721 | ValLoss: 0.1692 ValAcc: 0.9415
+Ep 5/50 | TrLoss: 0.0895 TrAcc: 0.9754 | ValLoss: 0.1873 ValAcc: 0.9323
+Ep 6/50 | TrLoss: 0.0771 TrAcc: 0.9778 | ValLoss: 0.4859 ValAcc: 0.8780
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.88      1.00      0.93      7957
+     Seizure       1.00      0.06      0.11      1184
+
+    accuracy                           0.88      9141
+   macro avg       0.94      0.53      0.52      9141
+weighted avg       0.89      0.88      0.83      9141
+
+
+=== RESULTADOS FINALES (personalized) ===
+    accuracy        f1 patient
+0   0.979834  0.979859   chb01
+1   0.995631  0.995695   chb02
+2   0.960763  0.958628   chb03
+3   0.653019  0.555962   chb04
+4   0.988457  0.988460   chb05
+5   0.993034  0.992650   chb06
+6   0.897553  0.890846   chb07
+7   0.895541  0.893192   chb08
+8   0.983564  0.983511   chb09
+9   0.972806  0.972124   chb10
+10  0.918339  0.957432   chb11
+11  0.856783  0.856877   chb12
+12  0.792278  0.750902   chb13
+13  0.974056  0.970869   chb14
+14  0.954751  0.954066   chb15
+15  0.928611  0.894238   chb16
+16  0.899329  0.892291   chb17
+17  0.861835  0.844348   chb18
+18  0.962052  0.961126   chb19
+19  0.941736  0.941232   chb20
+20  0.991949  0.991663   chb21
+21  0.948419  0.946189   chb22
+22  0.945164  0.943145   chb23
+23  0.878022  0.827744   chb24
+Guardado en results_personalized.csv

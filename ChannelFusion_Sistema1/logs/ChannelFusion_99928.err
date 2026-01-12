@@ -1,0 +1,25 @@
+/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Traceback (most recent call last):
+  File "minimain.py", line 182, in <module>
+    main()
+  File "minimain.py", line 164, in main
+    results = run_single_patient_personalized_experiment(random.choice(valid_patients))
+  File "minimain.py", line 115, in run_single_patient_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 38, in train
+    outputs = self.model(X)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/EpilepsyLSTM.py", line 97, in forward
+    out, (hn, cn) = self.lstm(x)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 772, in forward
+    self.check_forward_args(input, hx, batch_sizes)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 697, in check_forward_args
+    self.check_input(input, batch_sizes)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 210, in check_input
+    raise RuntimeError(
+RuntimeError: input.size(-1) must be equal to input_size. Expected 21, got 256
+srun: error: etse-75-51: task 0: Exited with exit code 1

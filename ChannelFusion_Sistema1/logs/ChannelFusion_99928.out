@@ -1,0 +1,9 @@
+Dispositivo actual: cuda
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> PRUEBA PERSONALIZADA (1 paciente): chb16 <<<
+--- [Personalized] Cargando: chb16 ---
+   Train: 14340 | Val: 3586 | Crisis Train: 232 | Crisis Val: 256
+Running class:  EpilepsyLSTM
+Entrenando en cuda...

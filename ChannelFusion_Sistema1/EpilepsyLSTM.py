@@ -112,7 +112,7 @@ def get_default_hyperparameters():
     outmodule_params={}
     
     # network input parameters
-    inputmodule_params['n_nodes'] = 21
+    inputmodule_params['n_nodes'] = 256
     
     # LSTM unit  parameters
     net_params['Lstacks'] = 1  # stacked layers (num_layers)

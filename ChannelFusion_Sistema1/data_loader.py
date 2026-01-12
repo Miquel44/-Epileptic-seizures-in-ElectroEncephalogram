@@ -156,8 +156,8 @@ def get_patient_dataloader(patient_id: str, batch_size=BATCH_SIZE):
     print(f"   Train: {len(X_train)} | Val: {len(X_val)} | Crisis Train: {y_train.sum()} | Crisis Val: {y_val.sum()}", flush=True)
 
     # Entrenando PODEMOS hacer shuffle del pasado
-    train_loader = DataLoader(EEGDataset(X_train, y_train), batch_size=batch_size, shuffle=True, num_workers=8, pin_memory=True)
-    val_loader = DataLoader(EEGDataset(X_val, y_val), batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True)
+    train_loader = DataLoader(EEGDataset(X_train, y_train), batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
+    val_loader = DataLoader(EEGDataset(X_val, y_val), batch_size=batch_size, shuffle=False, num_workers=4, pin_memory=True)
     
     return train_loader, val_loader
 

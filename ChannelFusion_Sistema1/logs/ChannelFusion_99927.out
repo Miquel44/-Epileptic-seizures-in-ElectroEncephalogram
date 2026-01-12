@@ -1,0 +1,11 @@
+Dispositivo actual: cuda
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> PRUEBA PERSONALIZADA (1 paciente): chb23 <<<
+--- [Personalized] Cargando: chb23 ---
+   Train: 27788 | Val: 6948 | Crisis Train: 1416 | Crisis Val: 1920
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+ERROR FATAL en chb23: input.size(-1) must be equal to input_size. Expected 21, got 256
+No se generaron resultados.

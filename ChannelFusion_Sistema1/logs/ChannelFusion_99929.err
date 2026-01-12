@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "minimain.py", line 182, in <module>
+    main()
+  File "minimain.py", line 172, in main
+    df = pd.DataFrame(results)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/pandas/core/frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 481, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 115, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 645, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+srun: error: etse-75-51: task 0: Exited with exit code 1
