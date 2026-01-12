@@ -15,11 +15,13 @@ import random
 from config import *
 from data_loader import get_patient_dataloader, get_leave_one_out_dataloader, preload_all_patients
 from models import ChannelFusionCNN
+from EpilepsyLSTM import EpilepsyLSTM, get_default_hyperparameters
 from trainer import Trainer
 
 # >>> CONFIGURACIÓN DEL EXPERIMENTO <<<
 # MODE = 'personalized' 
-MODE = 'leave_one_out'
+# MODE = 'leave_one_out'
+MODE = 'prova'
 
 def run_personalized_experiment(patients):
     print(f"\n>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: {len(patients)}) <<<")
@@ -95,6 +97,43 @@ def run_leave_one_out_experiment(patients):
 
     return results_table
 
+def run_single_patient_personalized_experiment(patient_id: str, save: bool = True):
+    print(f"\n>>> PRUEBA PERSONALIZADA (1 paciente): {patient_id} <<<", flush=True)
+
+    try:
+        # 1) Cargar splits del paciente
+        train_loader, val_loader = get_patient_dataloader(patient_id)
+
+        if len(train_loader) == 0:
+            print("SKIP: train_loader vacío.")
+            return None
+
+        # 2) Entrenar
+        inputmodule_params, net_params, outmodule_params = get_default_hyperparameters()
+        model = EpilepsyLSTM(inputmodule_params, net_params, outmodule_params)
+        trainer = Trainer(model, patience=5)
+        trainer.train(train_loader, val_loader, epochs=EPOCHS)
+
+        # 3) Evaluar
+        metrics = trainer.evaluate(val_loader)
+        metrics["patient"] = patient_id
+
+        # 4) Guardar modelo (opcional)
+        if save:
+            os.makedirs("models", exist_ok=True)
+            trainer.save_model(f"models/personalized_{patient_id}.pth")
+            print(f"Modelo guardado en models/personalized_{patient_id}.pth")
+
+        # Limpieza
+        del model, trainer, train_loader, val_loader
+        torch.cuda.empty_cache()
+
+        return metrics
+
+    except Exception as e:
+        print(f"ERROR FATAL en {patient_id}: {e}", flush=True)
+        return None
+
 
 def main():
     print(f"Dispositivo actual: {DEVICE}")
@@ -121,6 +160,9 @@ def main():
     elif MODE == 'leave_one_out':
         results = run_leave_one_out_experiment(valid_patients)
         filename = "results_leave_one_out.csv"
+    elif MODE == 'prova':
+        results = run_single_patient_personalized_experiment(random.choice(valid_patients))
+        filename = "results_prova.csv"
     else:
         print("Modo desconocido.")
         return

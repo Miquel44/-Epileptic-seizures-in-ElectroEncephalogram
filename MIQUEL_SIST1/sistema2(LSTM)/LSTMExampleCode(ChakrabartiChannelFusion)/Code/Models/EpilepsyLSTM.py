@@ -39,6 +39,22 @@ class EpilepsyLSTM(nn.Module):
         self.inputmodule_params=inputmodule_params
         self.net_params=net_params
         self.outmodule_params=outmodule_params
+
+        ### FEATURE EXTRACTOR CNN
+        # Bloque 1: Convolución sobre canales y tiempo
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=(3, 5), padding=(1, 2))
+        self.bn1 = nn.BatchNorm2d(32)
+        self.pool1 = nn.MaxPool2d(kernel_size=(2, 2))
+
+        # Bloque 2
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=(3, 5), padding=(1, 2))
+        self.bn2 = nn.BatchNorm2d(64)
+        self.pool2 = nn.MaxPool2d(kernel_size=(2, 2))
+
+        # Bloque 3
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=(3, 3), padding=(1, 1))
+        self.bn3 = nn.BatchNorm2d(128)
+        self.pool3 = nn.MaxPool2d(kernel_size=(2, 2))
         
         ### NETWORK ARCHITECTURE
         # IF batch_first THEN (batch, timesteps, features), ELSE (timesteps, batch, features)
@@ -59,10 +75,23 @@ class EpilepsyLSTM(nn.Module):
          init_weights_xavier_normal(self)
         
     def forward(self, x):
+        # Bloque 1
+        x = self.pool1(F.relu(self.bn1(self.conv1(x))))
+
+        # Bloque 2
+        x = self.pool2(F.relu(self.bn2(self.conv2(x))))
+
+        # Bloque 3
+        x = self.pool3(F.relu(self.bn3(self.conv3(x))))
+
+        # x: [B, F=128, C', T']
         
+        B, Fm, Cp, Tp = x.shape
+
         ## Reshape input
         # input [batch, features (=n_nodes), sequence_length (T)] ([N, 21, 640])
-        x = x.permute(0, 2, 1) # lstm  [batch, sequence_length, features]
+        x = x.permute(0, 3, 1, 2).contiguous()     # [B, Tp, Fm, Cp]
+        x = x.view(B, Tp, Fm * Cp)                 # [B, Tp, features]
         
         ## LSTM Processing
         out, (hn, cn) = self.lstm(x)
