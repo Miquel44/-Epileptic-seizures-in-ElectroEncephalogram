@@ -101,6 +101,39 @@ def load_data_from_patient_list(patient_list: List[str]) -> Tuple[np.ndarray, np
     
     return X, y
 
+# la funcion de arriba pero mejor??:
+def preload_all_patients(patient_list: List[str]) -> dict:
+    """
+    Carga todos los pacientes en un diccionario {patient_id: (X, y)}.
+    X ya tiene forma (N, 1, 21, 128) lista para CNN.
+    """
+    patient_data = {}
+    n_channels = 21
+
+    print(f"   Precargando {len(patient_list)} pacientes...", flush=True)
+
+    for patient_id in patient_list:
+        try:
+            sig, lab = load_single_patient(patient_id)
+            
+            if sig.shape[1] > n_channels:
+                sig = sig[:, :n_channels, :]
+            elif sig.shape[1] < n_channels:
+                padding = np.zeros((sig.shape[0], n_channels - sig.shape[1], sig.shape[2]), dtype=np.float32)
+                sig = np.concatenate([sig, padding], axis=1)
+            
+            patient_data[patient_id] = (
+                create_channel_fusion_input(sig.astype(np.float32)),
+                lab.astype(np.int64)
+            )
+            print(f"      {patient_id}: {sig.shape[0]} ventanas", flush=True)
+            
+        except Exception as e:
+            print(f"      [WARN] Skip {patient_id}: {e}", flush=True)
+
+    print(f"   [OK] {len(patient_data)} pacientes listos.\n", flush=True)
+    return patient_data
+
 
 # --- MODOS DE CARGA ---
 
@@ -123,37 +156,44 @@ def get_patient_dataloader(patient_id: str, batch_size=BATCH_SIZE):
     print(f"   Train: {len(X_train)} | Val: {len(X_val)} | Crisis Train: {y_train.sum()} | Crisis Val: {y_val.sum()}", flush=True)
 
     # Entrenando PODEMOS hacer shuffle del pasado
-    train_loader = DataLoader(EEGDataset(X_train, y_train), batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(EEGDataset(X_val, y_val), batch_size=batch_size, shuffle=False)
+    train_loader = DataLoader(EEGDataset(X_train, y_train), batch_size=batch_size, shuffle=True, num_workers=8, pin_memory=True)
+    val_loader = DataLoader(EEGDataset(X_val, y_val), batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True)
     
     return train_loader, val_loader
 
 
-def get_leave_one_out_dataloader(train_patients: List[str], test_patient: str, batch_size=BATCH_SIZE):
+def get_leave_one_out_dataloader(train_patients: List[str], test_patient: str, 
+                                  batch_size=BATCH_SIZE, 
+                                  preloaded_data: dict = None):
     """
     MODO GENERAL (LEAVE-ONE-OUT)
     Entrena con TODOS menos uno. Valida con el paciente NUEVO.
+    
+    Si preloaded_data es un dict {patient_id: (X, y)}, lo usa en vez de cargar de disco.
     """
     print(f"--- [Leave-One-Out] Test Patient: {test_patient} ---")
     
-    # 1. Cargar Training (Todos menos el test)
-    print("   Cargando Train Set (Multipaciente)...", flush=True)
-    # Si explota la RAM aquí, reduce len(train_patients) aleatoriamente antes de llamar
-    X_train, y_train = load_data_from_patient_list(train_patients)
-    print(f"   Train Shape: {X_train.shape} | RAM Aprox: {X_train.nbytes/1024**3:.2f} GB", flush=True)
-
-    train_dataset = EEGDataset(X_train, y_train)
-    del X_train, y_train
-    gc.collect()
-
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-
-    # 2. Cargar Validation (El paciente test)
-    print(f"   Cargando Test Patient...", flush=True)
-    X_val, y_val = load_data_from_patient_list([test_patient])
+    if preloaded_data is not None:
+        # MODO RÁPIDO: Usar datos precargados
+        print("   Usando datos precargados...", flush=True)
+        
+        train_X = np.concatenate([X for pid, (X, y) in preloaded_data.items() if pid != test_patient])
+        train_y = np.concatenate([y for pid, (X, y) in preloaded_data.items() if pid != test_patient])
+        
+        test_X, test_y = preloaded_data[test_patient]
+        
+    else:
+        # MODO ORIGINAL: Cargar de disco
+        print("   Cargando Train Set (Multipaciente)...", flush=True)
+        train_X, train_y = load_data_from_patient_list(train_patients)
+        
+        print(f"   Cargando Test Patient...", flush=True)
+        test_X, test_y = load_data_from_patient_list([test_patient])
     
-    val_dataset = EEGDataset(X_val, y_val)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    print(f"   Train: {len(train_X)} | Test: {len(test_X)}", flush=True)
+
+    train_loader = DataLoader(EEGDataset(train_X, train_y), batch_size=batch_size, shuffle=True, num_workers=8, pin_memory=True)
+    val_loader = DataLoader(EEGDataset(test_X, test_y), batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True)
     
     return train_loader, val_loader
 
