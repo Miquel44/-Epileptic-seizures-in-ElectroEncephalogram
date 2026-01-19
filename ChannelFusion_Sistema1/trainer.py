@@ -1,6 +1,7 @@
+import pip
 import torch
 import torch.nn as nn
-from sklearn.metrics import accuracy_score, f1_score, classification_report
+from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
 from typing import Dict
 import numpy as np
 
@@ -54,6 +55,10 @@ class Trainer:
             val_correct = 0
             val_total = 0
 
+            tp = 0
+            fp = 0
+            fn = 0
+
             with torch.no_grad():
                 for X, y in val_loader:
                     X, y = X.to(DEVICE), y.to(DEVICE)
@@ -65,8 +70,19 @@ class Trainer:
                     val_total += y.size(0)
                     val_correct += predicted.eq(y).sum().item()
 
+                    pred_pos = (predicted == 1)
+                    true_pos = (y == 1)
+
+                    tp += (pred_pos & true_pos).sum().item()
+                    fp += (pred_pos & ~true_pos).sum().item()
+                    fn += (~pred_pos & true_pos).sum().item()
+
             val_loss /= len(val_loader)
             val_acc = val_correct / val_total
+
+            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+            recall    = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+            f1_seizure = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
 
             self.history['train_loss'].append(train_loss)
             self.history['val_loss'].append(val_loss)
@@ -78,13 +94,14 @@ class Trainer:
                   f"ValLoss: {val_loss:.4f} ValAcc: {val_acc:.4f}", flush=True)
 
             # --- Early Stopping ---
-            if val_loss < best_val_loss:
-                best_val_loss = val_loss
+            min_delta = 1e-4
+            if f1_seizure > best_val_loss + min_delta:
+                best_val_loss = f1_seizure
                 patience_counter = 0
-                self.best_model_state = self.model.state_dict().copy()
+                self.best_model_state = {k: v.detach().cpu().clone() for k, v in self.model.state_dict().items()}
             else:
                 patience_counter += 1
-                if patience_counter >= self.patience:
+                if patience_counter >= self.patience + min_delta:
                     print(f"Early stopping! (Patience {self.patience})", flush=True)
                     self.model.load_state_dict(self.best_model_state)
                     break
@@ -107,6 +124,10 @@ class Trainer:
                 all_preds.extend(preds.cpu().numpy())
                 all_labels.extend(labels.numpy())
 
+        # Convertir listas a numpy arrays
+        all_preds = np.array(all_preds)
+        all_labels = np.array(all_labels)
+
         # Usar zero_division=0 para evitar warnings si no predice ninguna crisis
         report = classification_report(all_labels, all_preds, 
                                      target_names=['Normal', 'Seizure'], 
@@ -114,10 +135,21 @@ class Trainer:
         print("\n=== Reporte Validación ===", flush=True)
         print(report, flush=True)
 
+        # Calcular matriz de confusión
+        cm = confusion_matrix(all_labels, all_preds)
+
         return {
             'accuracy': accuracy_score(all_labels, all_preds),
-            'f1': f1_score(all_labels, all_preds, average='weighted', zero_division=0)
+            'f1': f1_score(all_labels, all_preds, average='weighted', zero_division=0),
+            'confusion_matrix': cm.tolist(),  # Convertir a lista para JSON
+            'y_true': all_labels.tolist(),
+            'y_pred': all_preds.tolist()
         }
+
+        # return {
+        #     'accuracy': accuracy_score(all_labels, all_preds),
+        #     'f1': f1_score(all_labels, all_preds, average='weighted', zero_division=0)
+        # }
 
     def save_model(self, path: str):
         torch.save(self.model.state_dict(), path)

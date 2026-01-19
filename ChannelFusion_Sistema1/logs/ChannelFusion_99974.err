@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 72, in train
+    tp += (pred_pos & true_pos).sum().item()
+UnboundLocalError: local variable 'tp' referenced before assignment
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 72, in train
+    tp += (pred_pos & true_pos).sum().item()
+UnboundLocalError: local variable 'tp' referenced before assignment
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 99974 ON etse-75-51 CANCELLED AT 2026-01-13T07:51:28 ***
+slurmstepd: error: *** STEP 99974.0 ON etse-75-51 CANCELLED AT 2026-01-13T07:51:28 ***

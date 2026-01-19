@@ -1,0 +1,3 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 99970.0 ON etse-75-51 CANCELLED AT 2026-01-13T05:11:08 ***
+slurmstepd: error: *** JOB 99970 ON etse-75-51 CANCELLED AT 2026-01-13T05:11:08 ***

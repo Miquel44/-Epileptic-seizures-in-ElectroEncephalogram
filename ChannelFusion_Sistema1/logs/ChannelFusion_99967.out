@@ -1,0 +1,36 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS2
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> PRUEBA PERSONALIZADA (1 paciente): chb16 <<<
+--- [Personalized] Cargando: chb16 ---
+   [BALANCED] Train reducido: 14108 -> 232 normales
+   Train: 464 | Val: 3586 | Crisis Train: 232 (50.0%) | Crisis Val: 256
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6955 TrAcc: 0.5000 | ValLoss: 0.6540 ValAcc: 0.9286
+Ep 2/50 | TrLoss: 0.6938 TrAcc: 0.5000 | ValLoss: 0.6571 ValAcc: 0.9286
+Ep 3/50 | TrLoss: 0.6922 TrAcc: 0.5000 | ValLoss: 0.6599 ValAcc: 0.9286
+Ep 4/50 | TrLoss: 0.6905 TrAcc: 0.5000 | ValLoss: 0.6626 ValAcc: 0.9286
+Ep 5/50 | TrLoss: 0.6887 TrAcc: 0.5000 | ValLoss: 0.6653 ValAcc: 0.9286
+Ep 6/50 | TrLoss: 0.6869 TrAcc: 0.5000 | ValLoss: 0.6680 ValAcc: 0.9286
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.93      1.00      0.96      3330
+     Seizure       0.00      0.00      0.00       256
+
+    accuracy                           0.93      3586
+   macro avg       0.46      0.50      0.48      3586
+weighted avg       0.86      0.93      0.89      3586
+
+
+=== RESULTADOS FINALES (prova) ===
+   accuracy  ...  patient
+0  0.928611  ...    chb16
+
+[1 rows x 6 columns]
+Guardado en results_prova.csv

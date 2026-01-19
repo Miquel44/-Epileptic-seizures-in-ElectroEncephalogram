@@ -1,0 +1,41 @@
+
+============================================================
+GENERANDO VISUALIZACIONES Y MÉTRICAS
+============================================================
+
+[OK] Cargado results_personalized_sis2.csv (24 pacientes)
+[OK] Cargado histories_personalized_sis2.json
+[OK] Cargado confusion_matrices_personalized_sis2.json
+[OK] Cargado results_leave_one_out.csv (2 pacientes)
+[OK] Cargado histories_leave_one_out.json
+[OK] Cargado confusion_matrices_leave_one_out.json
+
+--- Generando gráficos ---
+
+[OK] Guardado: boxplot_personalized_sis2.png
+[OK] Guardado: boxplot_leave_one_out.png
+[OK] Guardado: boxplots_comparison_sis2.png
+[OK] Guardado: loss_curves_sis2_personalized_sis2.png
+[OK] Guardado: loss_curves_sis2_leave_one_out.png
+[OK] Guardado: confusion_matrices_sis2_personalized_sis2.png
+[OK] Guardado: confusion_matrices_sis2_leave_one_out.png
+[OK] Guardado: confusion_matrix_aggregated_sis2.png
+[OK] Guardado: confusion_comparison_sis2.png
+[INFO] No hay datos ROC. Saltando curvas ROC.
+[OK] Guardado: metrics_table_sis2.csv
+
+================================================================================
+TABLA DE MÉTRICAS
+================================================================================
+  Experimento  Métrica  Media    Std    Min    Max Mediana
+Leave-One-Out Accuracy 0.9306 0.0752 0.6619 1.0000  0.9507
+Leave-One-Out F1-Score 0.9273 0.0909 0.5730 1.0000  0.9536
+Leave-One-Out Accuracy 0.9423 0.0068 0.9375 0.9471  0.9423
+Leave-One-Out F1-Score 0.9437 0.0087 0.9375 0.9499  0.9437
+================================================================================
+
+[OK] Guardado: metrics_per_patient_sis2.csv
+
+============================================================
+¡COMPLETADO!
+============================================================

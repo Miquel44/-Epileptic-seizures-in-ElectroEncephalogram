@@ -1,0 +1,192 @@
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Traceback (most recent call last):
+  File "minimain.py", line 61, in run_personalized_experiment
+    trainer.train(train_loader, val_loader, epochs=EPOCHS)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/ChannelFusion_Sistema1/trainer.py", line 106, in train
+    self.model.load_state_dict(self.best_model_state)
+  File "/export/fhome/maed01/-Epileptic-seizures-in-ElectroEncephalogram/MyVirtualEnv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1624, in load_state_dict
+    raise TypeError("Expected state_dict to be dict-like, got {}.".format(type(state_dict)))
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.

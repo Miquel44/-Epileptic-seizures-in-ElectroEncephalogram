@@ -1,0 +1,122 @@
+Dispositivo: cuda
+Pacientes encontrados: 24
+
+=== chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   Train: 21223 | Val: 5306 | Crisis Train: 2784 (13.1%) | Crisis Val: 696 (13.1%)
+   AUC: 1.0000
+
+=== chb02 ===
+--- [Personalized] Cargando: chb02 ---
+   Train: 7322 | Val: 1831 | Crisis Train: 1082 (14.8%) | Crisis Val: 270 (14.7%)
+   AUC: 0.9999
+
+=== chb03 ===
+--- [Personalized] Cargando: chb03 ---
+   Train: 22019 | Val: 5505 | Crisis Train: 2528 (11.5%) | Crisis Val: 632 (11.5%)
+   AUC: 0.9988
+
+=== chb04 ===
+--- [Personalized] Cargando: chb04 ---
+   Train: 17488 | Val: 4372 | Crisis Train: 2394 (13.7%) | Crisis Val: 598 (13.7%)
+   AUC: 0.9994
+
+=== chb05 ===
+--- [Personalized] Cargando: chb05 ---
+   Train: 10393 | Val: 2599 | Crisis Train: 3539 (34.1%) | Crisis Val: 885 (34.1%)
+   AUC: 1.0000
+
+=== chb06 ===
+--- [Personalized] Cargando: chb06 ---
+   Train: 37896 | Val: 9474 | Crisis Train: 915 (2.4%) | Crisis Val: 229 (2.4%)
+   AUC: 1.0000
+
+=== chb07 ===
+--- [Personalized] Cargando: chb07 ---
+   Train: 14872 | Val: 3719 | Crisis Train: 2061 (13.9%) | Crisis Val: 515 (13.8%)
+   AUC: 1.0000
+
+=== chb08 ===
+--- [Personalized] Cargando: chb08 ---
+   Train: 12560 | Val: 3140 | Crisis Train: 5850 (46.6%) | Crisis Val: 1462 (46.6%)
+   AUC: 0.9964
+
+=== chb09 ===
+--- [Personalized] Cargando: chb09 ---
+   Train: 15332 | Val: 3833 | Crisis Train: 1741 (11.4%) | Crisis Val: 435 (11.3%)
+   AUC: 1.0000
+
+=== chb10 ===
+--- [Personalized] Cargando: chb10 ---
+   Train: 22652 | Val: 5663 | Crisis Train: 2816 (12.4%) | Crisis Val: 704 (12.4%)
+   AUC: 1.0000
+
+=== chb11 ===
+--- [Personalized] Cargando: chb11 ---
+   Train: 8767 | Val: 2192 | Crisis Train: 5139 (58.6%) | Crisis Val: 1285 (58.6%)
+   AUC: 0.9991
+
+=== chb12 ===
+--- [Personalized] Cargando: chb12 ---
+   Train: 19048 | Val: 4762 | Crisis Train: 6157 (32.3%) | Crisis Val: 1539 (32.3%)
+   AUC: 0.9990
+
+=== chb13 ===
+--- [Personalized] Cargando: chb13 ---
+   Train: 22066 | Val: 5517 | Crisis Train: 2752 (12.5%) | Crisis Val: 688 (12.5%)
+   AUC: 0.9981
+
+=== chb14 ===
+--- [Personalized] Cargando: chb14 ---
+   Train: 20659 | Val: 5165 | Crisis Train: 1030 (5.0%) | Crisis Val: 258 (5.0%)
+   AUC: 0.9999
+
+=== chb15 ===
+--- [Personalized] Cargando: chb15 ---
+   Train: 50387 | Val: 12597 | Crisis Train: 12621 (25.0%) | Crisis Val: 3155 (25.0%)
+   AUC: 0.9998
+
+=== chb16 ===
+--- [Personalized] Cargando: chb16 ---
+   Train: 14340 | Val: 3586 | Crisis Train: 390 (2.7%) | Crisis Val: 98 (2.7%)
+   AUC: 0.9985
+
+=== chb17 ===
+--- [Personalized] Cargando: chb17 ---
+   Train: 10132 | Val: 2533 | Crisis Train: 1856 (18.3%) | Crisis Val: 464 (18.3%)
+   AUC: 0.9996
+
+=== chb18 ===
+--- [Personalized] Cargando: chb18 ---
+   Train: 17658 | Val: 4415 | Crisis Train: 1990 (11.3%) | Crisis Val: 498 (11.3%)
+   AUC: 0.9993
+
+=== chb19 ===
+--- [Personalized] Cargando: chb19 ---
+   Train: 9590 | Val: 2398 | Crisis Train: 1491 (15.5%) | Crisis Val: 373 (15.6%)
+   AUC: 0.9998
+
+=== chb20 ===
+--- [Personalized] Cargando: chb20 ---
+   Train: 17228 | Val: 4308 | Crisis Train: 1830 (10.6%) | Crisis Val: 458 (10.6%)
+   AUC: 0.9995
+
+=== chb21 ===
+--- [Personalized] Cargando: chb21 ---
+   Train: 11922 | Val: 2981 | Crisis Train: 1248 (10.5%) | Crisis Val: 312 (10.5%)
+   AUC: 0.9995
+
+=== chb22 ===
+--- [Personalized] Cargando: chb22 ---
+   Train: 9614 | Val: 2404 | Crisis Train: 1286 (13.4%) | Crisis Val: 322 (13.4%)
+   AUC: 1.0000
+
+=== chb23 ===
+--- [Personalized] Cargando: chb23 ---
+   Train: 27788 | Val: 6948 | Crisis Train: 2669 (9.6%) | Crisis Val: 667 (9.6%)
+   AUC: 0.9989
+
+=== chb24 ===
+--- [Personalized] Cargando: chb24 ---
+   Train: 36560 | Val: 9141 | Crisis Train: 3168 (8.7%) | Crisis Val: 792 (8.7%)
+   AUC: 0.9994

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "minimain.py", line 247, in <module>
+    main()
+  File "minimain.py", line 204, in main
+    print(f"Modelo seleccionado: {MODEL}")
+NameError: name 'MODEL' is not defined
+srun: error: etse-75-51: task 0: Exited with exit code 1

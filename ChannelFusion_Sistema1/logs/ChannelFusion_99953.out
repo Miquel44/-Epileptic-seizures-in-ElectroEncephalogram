@@ -1,0 +1,81 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS1
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: 2) <<<
+
+=== Paciente chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   Train: 21223 | Val: 5306 | Crisis Train: 1944 | Crisis Val: 1536
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.0961 TrAcc: 0.9658 | ValLoss: 0.1843 ValAcc: 0.9487
+Ep 2/50 | TrLoss: 0.0357 TrAcc: 0.9897 | ValLoss: 0.1726 ValAcc: 0.9453
+Ep 3/50 | TrLoss: 0.0263 TrAcc: 0.9926 | ValLoss: 0.1015 ValAcc: 0.9651
+Ep 4/50 | TrLoss: 0.0225 TrAcc: 0.9921 | ValLoss: 0.0933 ValAcc: 0.9670
+Ep 5/50 | TrLoss: 0.0126 TrAcc: 0.9960 | ValLoss: 0.1068 ValAcc: 0.9644
+Ep 6/50 | TrLoss: 0.0090 TrAcc: 0.9973 | ValLoss: 0.1013 ValAcc: 0.9663
+Ep 7/50 | TrLoss: 0.0114 TrAcc: 0.9959 | ValLoss: 0.0800 ValAcc: 0.9766
+Ep 8/50 | TrLoss: 0.0061 TrAcc: 0.9984 | ValLoss: 0.0777 ValAcc: 0.9759
+Ep 9/50 | TrLoss: 0.0040 TrAcc: 0.9989 | ValLoss: 0.0772 ValAcc: 0.9755
+Ep 10/50 | TrLoss: 0.0028 TrAcc: 0.9993 | ValLoss: 0.0851 ValAcc: 0.9749
+Ep 11/50 | TrLoss: 0.0023 TrAcc: 0.9997 | ValLoss: 0.0950 ValAcc: 0.9721
+Ep 12/50 | TrLoss: 0.0019 TrAcc: 0.9997 | ValLoss: 0.1060 ValAcc: 0.9702
+Ep 13/50 | TrLoss: 0.0016 TrAcc: 0.9997 | ValLoss: 0.0831 ValAcc: 0.9759
+Ep 14/50 | TrLoss: 0.0008 TrAcc: 1.0000 | ValLoss: 0.0841 ValAcc: 0.9768
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.98      0.98      3770
+     Seizure       0.95      0.97      0.96      1536
+
+    accuracy                           0.98      5306
+   macro avg       0.97      0.97      0.97      5306
+weighted avg       0.98      0.98      0.98      5306
+
+
+=== Paciente chb02 ===
+--- [Personalized] Cargando: chb02 ---
+   Train: 7322 | Val: 1831 | Crisis Train: 1288 | Crisis Val: 64
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3254 TrAcc: 0.8511 | ValLoss: 0.2721 ValAcc: 0.9563
+Ep 2/50 | TrLoss: 0.1215 TrAcc: 0.9568 | ValLoss: 0.0936 ValAcc: 0.9869
+Ep 3/50 | TrLoss: 0.0723 TrAcc: 0.9757 | ValLoss: 0.0454 ValAcc: 0.9918
+Ep 4/50 | TrLoss: 0.0546 TrAcc: 0.9814 | ValLoss: 0.0661 ValAcc: 0.9842
+Ep 5/50 | TrLoss: 0.0438 TrAcc: 0.9854 | ValLoss: 0.1312 ValAcc: 0.9508
+Ep 6/50 | TrLoss: 0.0359 TrAcc: 0.9880 | ValLoss: 0.0284 ValAcc: 0.9956
+Ep 7/50 | TrLoss: 0.0272 TrAcc: 0.9910 | ValLoss: 0.0171 ValAcc: 0.9956
+Ep 8/50 | TrLoss: 0.0217 TrAcc: 0.9934 | ValLoss: 0.0377 ValAcc: 0.9929
+Ep 9/50 | TrLoss: 0.0237 TrAcc: 0.9919 | ValLoss: 0.0286 ValAcc: 0.9934
+Ep 10/50 | TrLoss: 0.0162 TrAcc: 0.9948 | ValLoss: 0.0149 ValAcc: 0.9962
+Ep 11/50 | TrLoss: 0.0136 TrAcc: 0.9962 | ValLoss: 0.0205 ValAcc: 0.9956
+Ep 12/50 | TrLoss: 0.0134 TrAcc: 0.9955 | ValLoss: 0.0122 ValAcc: 0.9967
+Ep 13/50 | TrLoss: 0.0092 TrAcc: 0.9980 | ValLoss: 0.0229 ValAcc: 0.9934
+Ep 14/50 | TrLoss: 0.0099 TrAcc: 0.9971 | ValLoss: 0.0472 ValAcc: 0.9853
+Ep 15/50 | TrLoss: 0.0132 TrAcc: 0.9948 | ValLoss: 0.0058 ValAcc: 0.9989
+Ep 16/50 | TrLoss: 0.0084 TrAcc: 0.9977 | ValLoss: 0.0114 ValAcc: 0.9984
+Ep 17/50 | TrLoss: 0.0049 TrAcc: 0.9996 | ValLoss: 0.0073 ValAcc: 0.9989
+Ep 18/50 | TrLoss: 0.0050 TrAcc: 0.9982 | ValLoss: 0.0081 ValAcc: 0.9989
+Ep 19/50 | TrLoss: 0.0055 TrAcc: 0.9989 | ValLoss: 0.0072 ValAcc: 0.9989
+Ep 20/50 | TrLoss: 0.0046 TrAcc: 0.9988 | ValLoss: 0.0111 ValAcc: 0.9973
+Early stopping! (Patience 5)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       1.00      1.00      1.00      1767
+     Seizure       0.94      0.98      0.96        64
+
+    accuracy                           1.00      1831
+   macro avg       0.97      0.99      0.98      1831
+weighted avg       1.00      1.00      1.00      1831
+
+Guardado: histories_personalized.json, confusion_matrices_personalized.json
+
+=== RESULTADOS FINALES (personalized) ===
+  patient  accuracy        f1
+0   chb01  0.976819  0.976869
+1   chb02  0.997269  0.997299
+Guardado en results_personalized.csv

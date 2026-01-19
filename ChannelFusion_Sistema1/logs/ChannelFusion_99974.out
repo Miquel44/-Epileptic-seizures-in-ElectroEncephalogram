@@ -1,0 +1,23 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS2
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: 24) <<<
+
+=== Paciente chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   Train: 21223 | Val: 5306 | Crisis Train: 1944 (9.2%) | Crisis Val: 1536
+Entrenando en cuda...
+ERROR FATAL en chb01: local variable 'tp' referenced before assignment
+
+=== Paciente chb02 ===
+--- [Personalized] Cargando: chb02 ---
+   Train: 7322 | Val: 1831 | Crisis Train: 1288 (17.6%) | Crisis Val: 64
+Entrenando en cuda...
+ERROR FATAL en chb02: local variable 'tp' referenced before assignment
+
+=== Paciente chb03 ===
+--- [Personalized] Cargando: chb03 ---
+   Train: 22019 | Val: 5505 | Crisis Train: 2240 (10.2%) | Crisis Val: 920
+Entrenando en cuda...

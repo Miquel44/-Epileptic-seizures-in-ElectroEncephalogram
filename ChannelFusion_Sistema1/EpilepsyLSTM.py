@@ -12,6 +12,8 @@ import torch.nn.functional as F
 from ModelWeightsInit import *
 
 
+## LSTM Intra Ventana
+
 class EpilepsyLSTM(nn.Module):
     """
     Implementation:
@@ -115,7 +117,7 @@ def get_default_hyperparameters():
     inputmodule_params['n_nodes'] = 256
     
     # LSTM unit  parameters
-    net_params['Lstacks'] = 1  # stacked layers (num_layers)
+    net_params['Lstacks'] = 3  # stacked layers (num_layers)
     net_params['dropout'] = 0.0
     net_params['hidden_size']= 256  #h
    
@@ -124,3 +126,75 @@ def get_default_hyperparameters():
     outmodule_params['hd']=128
     
     return inputmodule_params, net_params, outmodule_params
+
+## LSTM Inter Ventana
+
+class CNNBackbone(nn.Module):
+    def __init__(self, out_dim=256):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=(3, 1), padding=(1, 2))
+        self.bn1 = nn.BatchNorm2d(32)
+        self.pool1 = nn.MaxPool2d((2, 2))
+
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=(3, 1), padding=(1, 2))
+        self.bn2 = nn.BatchNorm2d(64)
+        self.pool2 = nn.MaxPool2d((2, 2))
+
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=(3, 1), padding=(1, 1))
+        self.bn3 = nn.BatchNorm2d(128)
+        self.pool3 = nn.MaxPool2d((2, 2))
+
+        # Proyección a un "hipervector" de tamaño fijo
+        self.gap = nn.AdaptiveAvgPool2d((1, 1))   # -> [B, 128, 1, 1]
+        self.proj = nn.Linear(128, out_dim)
+
+    def forward(self, x):
+        # x: [B, 1, C, T]
+        x = self.pool1(F.relu(self.bn1(self.conv1(x))))
+        x = self.pool2(F.relu(self.bn2(self.conv2(x))))
+        x = self.pool3(F.relu(self.bn3(self.conv3(x))))
+
+        x = self.gap(x).squeeze(-1).squeeze(-1)  # [B, 128]
+        x = self.proj(x)                         # [B, out_dim]
+        return x
+
+
+class EpilepsyCNNLSTMSeq(nn.Module):
+    def __init__(self, emb_dim=256, hidden_size=128, lstm_layers=1, dropout=0.0, n_classes=2, hd=128):
+        super().__init__()
+        self.backbone = CNNBackbone(out_dim=emb_dim)
+
+        self.lstm = nn.LSTM(
+            input_size=emb_dim,
+            hidden_size=hidden_size,
+            num_layers=lstm_layers,
+            batch_first=True,
+            bidirectional=False,
+            dropout=dropout if lstm_layers > 1 else 0.0
+        )
+
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size, hd),
+            nn.ReLU(),
+            nn.Linear(hd, n_classes)
+        )
+
+    def forward(self, x_seq):
+        # x_seq: [B, K, 1, C, T]
+        B, K, one, C, T = x_seq.shape
+
+        # Convertimos a batch grande para pasar por CNN: [B*K, 1, C, T]
+        x = x_seq.view(B * K, one, C, T)
+
+        # Embeddings por ventana: [B*K, emb_dim]
+        emb = self.backbone(x)
+
+        # Volvemos a secuencia: [B, K, emb_dim]
+        emb = emb.view(B, K, -1)
+
+        # LSTM sobre hipervectores sucesivos
+        out, _ = self.lstm(emb)      # [B, K, hidden_size]
+        h_last = out.mean(dim=1)     # mean pooling temporal
+
+        logits = self.fc(h_last)
+        return logits

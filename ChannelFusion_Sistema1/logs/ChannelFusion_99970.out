@@ -1,0 +1,26 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS2
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: 24) <<<
+
+=== Paciente chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   [BALANCED] Train reducido: 19279 -> 1944 normales
+   Train: 3888 | Val: 5306 | Crisis Train: 1944 (50.0%) | Crisis Val: 1536
+Running class:  EpilepsyLSTM
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6813 TrAcc: 0.5563 | ValLoss: 0.6702 ValAcc: 0.9278
+Ep 2/50 | TrLoss: 0.6389 TrAcc: 0.9316 | ValLoss: 0.6258 ValAcc: 0.8873
+Ep 3/50 | TrLoss: 0.5497 TrAcc: 0.9501 | ValLoss: 0.5016 ValAcc: 0.9163
+Ep 4/50 | TrLoss: 0.3890 TrAcc: 0.9537 | ValLoss: 0.3214 ValAcc: 0.9361
+Ep 5/50 | TrLoss: 0.2286 TrAcc: 0.9617 | ValLoss: 0.2311 ValAcc: 0.9340
+Ep 6/50 | TrLoss: 0.1492 TrAcc: 0.9658 | ValLoss: 0.2077 ValAcc: 0.9399
+Ep 7/50 | TrLoss: 0.1051 TrAcc: 0.9758 | ValLoss: 0.1781 ValAcc: 0.9512
+Ep 8/50 | TrLoss: 0.0998 TrAcc: 0.9727 | ValLoss: 0.1670 ValAcc: 0.9519
+Ep 9/50 | TrLoss: 0.0632 TrAcc: 0.9843 | ValLoss: 0.1503 ValAcc: 0.9514
+Ep 10/50 | TrLoss: 0.0450 TrAcc: 0.9895 | ValLoss: 0.1609 ValAcc: 0.9446
+Ep 11/50 | TrLoss: 0.0297 TrAcc: 0.9941 | ValLoss: 0.1413 ValAcc: 0.9540
+Ep 12/50 | TrLoss: 0.0235 TrAcc: 0.9951 | ValLoss: 0.1746 ValAcc: 0.9461
+Ep 13/50 | TrLoss: 0.0177 TrAcc: 0.9964 | ValLoss: 0.1192 ValAcc: 0.9661

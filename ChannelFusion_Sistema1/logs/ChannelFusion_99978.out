@@ -1,0 +1,320 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS2
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO PERSONALIZADO (Total: 24) <<<
+
+=== Paciente chb01 ===
+--- [Personalized] Cargando: chb01 ---
+   Train: 21223 | Val: 5306 | Crisis Train: 1944 (9.2%) | Crisis Val: 1536
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4604 TrAcc: 0.9086 | ValLoss: 0.3840 ValAcc: 0.7444
+Ep 2/50 | TrLoss: 0.1190 TrAcc: 0.9715 | ValLoss: 0.1747 ValAcc: 0.9653
+Ep 3/50 | TrLoss: 0.0559 TrAcc: 0.9889 | ValLoss: 0.1350 ValAcc: 0.9632
+Ep 4/50 | TrLoss: 0.0425 TrAcc: 0.9907 | ValLoss: 0.1231 ValAcc: 0.9632
+Ep 5/50 | TrLoss: 0.0347 TrAcc: 0.9925 | ValLoss: 0.1149 ValAcc: 0.9624
+Ep 6/50 | TrLoss: 0.0281 TrAcc: 0.9939 | ValLoss: 0.1020 ValAcc: 0.9639
+Early stopping! (Patience 5)
+ERROR FATAL en chb01: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb02 ===
+--- [Personalized] Cargando: chb02 ---
+   Train: 7322 | Val: 1831 | Crisis Train: 1288 (17.6%) | Crisis Val: 64
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6831 TrAcc: 0.5312 | ValLoss: 0.6732 ValAcc: 0.9649
+Ep 2/50 | TrLoss: 0.5711 TrAcc: 0.8239 | ValLoss: 0.4941 ValAcc: 0.9649
+Ep 3/50 | TrLoss: 0.4640 TrAcc: 0.8239 | ValLoss: 0.3317 ValAcc: 0.9649
+Ep 4/50 | TrLoss: 0.3473 TrAcc: 0.8255 | ValLoss: 0.2573 ValAcc: 0.9649
+Ep 5/50 | TrLoss: 0.2196 TrAcc: 0.9337 | ValLoss: 0.2009 ValAcc: 0.9588
+Ep 6/50 | TrLoss: 0.1248 TrAcc: 0.9766 | ValLoss: 0.1601 ValAcc: 0.9550
+Early stopping! (Patience 5)
+ERROR FATAL en chb02: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb03 ===
+--- [Personalized] Cargando: chb03 ---
+   Train: 22019 | Val: 5505 | Crisis Train: 2240 (10.2%) | Crisis Val: 920
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4677 TrAcc: 0.9006 | ValLoss: 0.3020 ValAcc: 0.9356
+Ep 2/50 | TrLoss: 0.1418 TrAcc: 0.9614 | ValLoss: 0.1988 ValAcc: 0.9125
+Ep 3/50 | TrLoss: 0.0548 TrAcc: 0.9869 | ValLoss: 0.1580 ValAcc: 0.9427
+Ep 4/50 | TrLoss: 0.0407 TrAcc: 0.9894 | ValLoss: 0.1299 ValAcc: 0.9520
+Ep 5/50 | TrLoss: 0.0333 TrAcc: 0.9910 | ValLoss: 0.1436 ValAcc: 0.9441
+Ep 6/50 | TrLoss: 0.0268 TrAcc: 0.9935 | ValLoss: 0.0438 ValAcc: 0.9874
+Early stopping! (Patience 5)
+ERROR FATAL en chb03: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb04 ===
+--- [Personalized] Cargando: chb04 ---
+   Train: 17488 | Val: 4372 | Crisis Train: 1264 (7.2%) | Crisis Val: 1728
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5178 TrAcc: 0.9277 | ValLoss: 0.9313 ValAcc: 0.6039
+Ep 2/50 | TrLoss: 0.2756 TrAcc: 0.9277 | ValLoss: 1.3771 ValAcc: 0.6039
+Ep 3/50 | TrLoss: 0.2079 TrAcc: 0.9277 | ValLoss: 1.3271 ValAcc: 0.6039
+Ep 4/50 | TrLoss: 0.1364 TrAcc: 0.9328 | ValLoss: 1.6783 ValAcc: 0.6039
+Ep 5/50 | TrLoss: 0.0733 TrAcc: 0.9828 | ValLoss: 2.2475 ValAcc: 0.6399
+Ep 6/50 | TrLoss: 0.0360 TrAcc: 0.9945 | ValLoss: 2.3668 ValAcc: 0.6798
+Early stopping! (Patience 5)
+ERROR FATAL en chb04: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb05 ===
+--- [Personalized] Cargando: chb05 ---
+   Train: 10393 | Val: 2599 | Crisis Train: 3496 (33.6%) | Crisis Val: 928
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6029 TrAcc: 0.8803 | ValLoss: 0.5733 ValAcc: 0.9228
+Ep 2/50 | TrLoss: 0.4282 TrAcc: 0.9261 | ValLoss: 0.3714 ValAcc: 0.9251
+Ep 3/50 | TrLoss: 0.2320 TrAcc: 0.9468 | ValLoss: 0.2133 ValAcc: 0.9320
+Ep 4/50 | TrLoss: 0.1388 TrAcc: 0.9597 | ValLoss: 0.1554 ValAcc: 0.9537
+Ep 5/50 | TrLoss: 0.1010 TrAcc: 0.9678 | ValLoss: 0.1164 ValAcc: 0.9676
+Ep 6/50 | TrLoss: 0.0743 TrAcc: 0.9807 | ValLoss: 0.0824 ValAcc: 0.9757
+Early stopping! (Patience 5)
+ERROR FATAL en chb05: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb06 ===
+--- [Personalized] Cargando: chb06 ---
+   Train: 37896 | Val: 9474 | Crisis Train: 936 (2.5%) | Crisis Val: 208
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3213 TrAcc: 0.9507 | ValLoss: 0.1506 ValAcc: 0.9780
+Ep 2/50 | TrLoss: 0.1099 TrAcc: 0.9753 | ValLoss: 0.1598 ValAcc: 0.9780
+Ep 3/50 | TrLoss: 0.0979 TrAcc: 0.9753 | ValLoss: 0.1504 ValAcc: 0.9780
+Ep 4/50 | TrLoss: 0.0684 TrAcc: 0.9754 | ValLoss: 0.0732 ValAcc: 0.9780
+Ep 5/50 | TrLoss: 0.0317 TrAcc: 0.9917 | ValLoss: 0.0565 ValAcc: 0.9823
+Ep 6/50 | TrLoss: 0.0203 TrAcc: 0.9957 | ValLoss: 0.0364 ValAcc: 0.9945
+Early stopping! (Patience 5)
+ERROR FATAL en chb06: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb07 ===
+--- [Personalized] Cargando: chb07 ---
+   Train: 14872 | Val: 3719 | Crisis Train: 1440 (9.7%) | Crisis Val: 1136
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6626 TrAcc: 0.5960 | ValLoss: 0.5694 ValAcc: 0.9380
+Ep 2/50 | TrLoss: 0.3391 TrAcc: 0.9842 | ValLoss: 0.4368 ValAcc: 0.8830
+Ep 3/50 | TrLoss: 0.0975 TrAcc: 0.9845 | ValLoss: 0.4963 ValAcc: 0.9175
+Ep 4/50 | TrLoss: 0.0520 TrAcc: 0.9878 | ValLoss: 0.4400 ValAcc: 0.9337
+Ep 5/50 | TrLoss: 0.0355 TrAcc: 0.9915 | ValLoss: 0.6679 ValAcc: 0.9078
+Ep 6/50 | TrLoss: 0.0277 TrAcc: 0.9940 | ValLoss: 0.7053 ValAcc: 0.9232
+Early stopping! (Patience 5)
+ERROR FATAL en chb07: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb08 ===
+--- [Personalized] Cargando: chb08 ---
+   Train: 12560 | Val: 3140 | Crisis Train: 5208 (41.5%) | Crisis Val: 2104
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6177 TrAcc: 0.7392 | ValLoss: 0.5548 ValAcc: 0.8441
+Ep 2/50 | TrLoss: 0.4394 TrAcc: 0.8812 | ValLoss: 0.5794 ValAcc: 0.7598
+Ep 3/50 | TrLoss: 0.2843 TrAcc: 0.9042 | ValLoss: 0.9623 ValAcc: 0.6567
+Ep 4/50 | TrLoss: 0.1942 TrAcc: 0.9336 | ValLoss: 0.5612 ValAcc: 0.8103
+Ep 5/50 | TrLoss: 0.1506 TrAcc: 0.9508 | ValLoss: 0.5000 ValAcc: 0.8240
+Ep 6/50 | TrLoss: 0.1280 TrAcc: 0.9590 | ValLoss: 0.3142 ValAcc: 0.8920
+Early stopping! (Patience 5)
+ERROR FATAL en chb08: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb09 ===
+--- [Personalized] Cargando: chb09 ---
+   Train: 15332 | Val: 3833 | Crisis Train: 1131 (7.4%) | Crisis Val: 1045
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5156 TrAcc: 0.9262 | ValLoss: 0.5328 ValAcc: 0.7291
+Ep 2/50 | TrLoss: 0.2167 TrAcc: 0.9531 | ValLoss: 0.2862 ValAcc: 0.9260
+Ep 3/50 | TrLoss: 0.0761 TrAcc: 0.9864 | ValLoss: 0.1750 ValAcc: 0.9848
+Ep 4/50 | TrLoss: 0.0394 TrAcc: 0.9942 | ValLoss: 0.1484 ValAcc: 0.9838
+Ep 5/50 | TrLoss: 0.0284 TrAcc: 0.9958 | ValLoss: 0.1390 ValAcc: 0.9848
+Ep 6/50 | TrLoss: 0.0226 TrAcc: 0.9968 | ValLoss: 0.1417 ValAcc: 0.9767
+Early stopping! (Patience 5)
+ERROR FATAL en chb09: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb10 ===
+--- [Personalized] Cargando: chb10 ---
+   Train: 22652 | Val: 5663 | Crisis Train: 2392 (10.6%) | Crisis Val: 1128
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4783 TrAcc: 0.8813 | ValLoss: 0.4937 ValAcc: 0.8090
+Ep 2/50 | TrLoss: 0.1667 TrAcc: 0.9482 | ValLoss: 0.4735 ValAcc: 0.9342
+Ep 3/50 | TrLoss: 0.0629 TrAcc: 0.9870 | ValLoss: 0.3990 ValAcc: 0.9630
+Ep 4/50 | TrLoss: 0.0369 TrAcc: 0.9922 | ValLoss: 0.3690 ValAcc: 0.9622
+Ep 5/50 | TrLoss: 0.0284 TrAcc: 0.9939 | ValLoss: 0.4275 ValAcc: 0.9740
+Ep 6/50 | TrLoss: 0.0208 TrAcc: 0.9952 | ValLoss: 0.6325 ValAcc: 0.9636
+Early stopping! (Patience 5)
+ERROR FATAL en chb10: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb11 ===
+--- [Personalized] Cargando: chb11 ---
+   Train: 8767 | Val: 2192 | Crisis Train: 4232 (48.3%) | Crisis Val: 2192
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6184 TrAcc: 0.8604 | ValLoss: 0.5982 ValAcc: 0.9139
+Ep 2/50 | TrLoss: 0.4684 TrAcc: 0.9214 | ValLoss: 0.4945 ValAcc: 0.9111
+Ep 3/50 | TrLoss: 0.3125 TrAcc: 0.9364 | ValLoss: 0.5550 ValAcc: 0.8887
+Ep 4/50 | TrLoss: 0.1701 TrAcc: 0.9641 | ValLoss: 0.7156 ValAcc: 0.8882
+Ep 5/50 | TrLoss: 0.0767 TrAcc: 0.9889 | ValLoss: 0.6143 ValAcc: 0.9217
+Ep 6/50 | TrLoss: 0.0442 TrAcc: 0.9913 | ValLoss: 0.3089 ValAcc: 0.9505
+Early stopping! (Patience 5)
+ERROR FATAL en chb11: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb12 ===
+--- [Personalized] Cargando: chb12 ---
+   Train: 19048 | Val: 4762 | Crisis Train: 4992 (26.2%) | Crisis Val: 2704
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6181 TrAcc: 0.7252 | ValLoss: 0.8575 ValAcc: 0.4311
+Ep 2/50 | TrLoss: 0.5522 TrAcc: 0.7444 | ValLoss: 0.9674 ValAcc: 0.4446
+Ep 3/50 | TrLoss: 0.4147 TrAcc: 0.8214 | ValLoss: 0.6271 ValAcc: 0.7892
+Ep 4/50 | TrLoss: 0.2329 TrAcc: 0.9279 | ValLoss: 0.4997 ValAcc: 0.8361
+Ep 5/50 | TrLoss: 0.1891 TrAcc: 0.9430 | ValLoss: 0.7817 ValAcc: 0.7578
+Ep 6/50 | TrLoss: 0.1603 TrAcc: 0.9529 | ValLoss: 0.5674 ValAcc: 0.8159
+Early stopping! (Patience 5)
+ERROR FATAL en chb12: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb13 ===
+--- [Personalized] Cargando: chb13 ---
+   Train: 22066 | Val: 5517 | Crisis Train: 1800 (8.2%) | Crisis Val: 1640
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4974 TrAcc: 0.9140 | ValLoss: 0.6751 ValAcc: 0.7023
+Ep 2/50 | TrLoss: 0.2835 TrAcc: 0.9184 | ValLoss: 0.7764 ValAcc: 0.7023
+Ep 3/50 | TrLoss: 0.2533 TrAcc: 0.9186 | ValLoss: 0.8276 ValAcc: 0.7023
+Ep 4/50 | TrLoss: 0.1985 TrAcc: 0.9315 | ValLoss: 0.8103 ValAcc: 0.7184
+Ep 5/50 | TrLoss: 0.0893 TrAcc: 0.9761 | ValLoss: 0.5628 ValAcc: 0.8375
+Ep 6/50 | TrLoss: 0.0659 TrAcc: 0.9844 | ValLoss: 0.5512 ValAcc: 0.8475
+Early stopping! (Patience 5)
+ERROR FATAL en chb13: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb14 ===
+--- [Personalized] Cargando: chb14 ---
+   Train: 20659 | Val: 5165 | Crisis Train: 1000 (4.8%) | Crisis Val: 288
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3766 TrAcc: 0.9516 | ValLoss: 0.3654 ValAcc: 0.9441
+Ep 2/50 | TrLoss: 0.1683 TrAcc: 0.9516 | ValLoss: 0.3503 ValAcc: 0.9441
+Ep 3/50 | TrLoss: 0.1306 TrAcc: 0.9516 | ValLoss: 0.2732 ValAcc: 0.9441
+Ep 4/50 | TrLoss: 0.0938 TrAcc: 0.9689 | ValLoss: 0.2400 ValAcc: 0.9769
+Ep 5/50 | TrLoss: 0.0658 TrAcc: 0.9858 | ValLoss: 0.2141 ValAcc: 0.9781
+Ep 6/50 | TrLoss: 0.0521 TrAcc: 0.9877 | ValLoss: 0.1592 ValAcc: 0.9810
+Early stopping! (Patience 5)
+ERROR FATAL en chb14: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb15 ===
+--- [Personalized] Cargando: chb15 ---
+   Train: 50387 | Val: 12597 | Crisis Train: 11152 (22.1%) | Crisis Val: 4624
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.4923 TrAcc: 0.7735 | ValLoss: 0.3253 ValAcc: 0.8952
+Ep 2/50 | TrLoss: 0.1228 TrAcc: 0.9639 | ValLoss: 0.1313 ValAcc: 0.9619
+Ep 3/50 | TrLoss: 0.0732 TrAcc: 0.9786 | ValLoss: 0.1319 ValAcc: 0.9643
+Ep 4/50 | TrLoss: 0.0554 TrAcc: 0.9835 | ValLoss: 0.1560 ValAcc: 0.9558
+Ep 5/50 | TrLoss: 0.0440 TrAcc: 0.9867 | ValLoss: 0.1537 ValAcc: 0.9596
+Ep 6/50 | TrLoss: 0.0353 TrAcc: 0.9899 | ValLoss: 0.1270 ValAcc: 0.9615
+Early stopping! (Patience 5)
+ERROR FATAL en chb15: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb16 ===
+--- [Personalized] Cargando: chb16 ---
+   Train: 14340 | Val: 3586 | Crisis Train: 232 (1.6%) | Crisis Val: 256
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5363 TrAcc: 0.8191 | ValLoss: 0.3932 ValAcc: 0.9293
+Ep 2/50 | TrLoss: 0.1578 TrAcc: 0.9838 | ValLoss: 0.2821 ValAcc: 0.9293
+Ep 3/50 | TrLoss: 0.0831 TrAcc: 0.9838 | ValLoss: 0.3150 ValAcc: 0.9293
+Ep 4/50 | TrLoss: 0.0811 TrAcc: 0.9838 | ValLoss: 0.2994 ValAcc: 0.9293
+Ep 5/50 | TrLoss: 0.0798 TrAcc: 0.9838 | ValLoss: 0.2883 ValAcc: 0.9293
+Ep 6/50 | TrLoss: 0.0786 TrAcc: 0.9838 | ValLoss: 0.2781 ValAcc: 0.9293
+Early stopping! (Patience 5)
+ERROR FATAL en chb16: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb17 ===
+--- [Personalized] Cargando: chb17 ---
+   Train: 10132 | Val: 2533 | Crisis Train: 1624 (16.0%) | Crisis Val: 696
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6030 TrAcc: 0.8396 | ValLoss: 0.6233 ValAcc: 0.7242
+Ep 2/50 | TrLoss: 0.4589 TrAcc: 0.8397 | ValLoss: 0.4682 ValAcc: 0.7242
+Ep 3/50 | TrLoss: 0.3088 TrAcc: 0.8877 | ValLoss: 0.3869 ValAcc: 0.7710
+Ep 4/50 | TrLoss: 0.1885 TrAcc: 0.9473 | ValLoss: 0.6010 ValAcc: 0.7603
+Ep 5/50 | TrLoss: 0.0846 TrAcc: 0.9812 | ValLoss: 0.3286 ValAcc: 0.9073
+Ep 6/50 | TrLoss: 0.0520 TrAcc: 0.9882 | ValLoss: 0.5151 ValAcc: 0.8847
+Early stopping! (Patience 5)
+ERROR FATAL en chb17: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb18 ===
+--- [Personalized] Cargando: chb18 ---
+   Train: 17658 | Val: 4415 | Crisis Train: 1592 (9.0%) | Crisis Val: 896
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5911 TrAcc: 0.8176 | ValLoss: 0.5916 ValAcc: 0.7966
+Ep 2/50 | TrLoss: 0.3105 TrAcc: 0.9098 | ValLoss: 0.4218 ValAcc: 0.7966
+Ep 3/50 | TrLoss: 0.1797 TrAcc: 0.9390 | ValLoss: 0.4124 ValAcc: 0.8191
+Ep 4/50 | TrLoss: 0.1178 TrAcc: 0.9720 | ValLoss: 0.5135 ValAcc: 0.8543
+Ep 5/50 | TrLoss: 0.0834 TrAcc: 0.9790 | ValLoss: 0.5659 ValAcc: 0.8357
+Ep 6/50 | TrLoss: 0.0743 TrAcc: 0.9821 | ValLoss: 0.6767 ValAcc: 0.8207
+Early stopping! (Patience 5)
+ERROR FATAL en chb18: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb19 ===
+--- [Personalized] Cargando: chb19 ---
+   Train: 9590 | Val: 2398 | Crisis Train: 1224 (12.8%) | Crisis Val: 640
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6498 TrAcc: 0.7230 | ValLoss: 0.5951 ValAcc: 0.9284
+Ep 2/50 | TrLoss: 0.4633 TrAcc: 0.9556 | ValLoss: 0.3864 ValAcc: 0.9213
+Ep 3/50 | TrLoss: 0.2493 TrAcc: 0.9566 | ValLoss: 0.2700 ValAcc: 0.9238
+Ep 4/50 | TrLoss: 0.1664 TrAcc: 0.9580 | ValLoss: 0.2758 ValAcc: 0.9238
+Ep 5/50 | TrLoss: 0.1514 TrAcc: 0.9594 | ValLoss: 0.2705 ValAcc: 0.9221
+Ep 6/50 | TrLoss: 0.1411 TrAcc: 0.9613 | ValLoss: 0.2558 ValAcc: 0.9209
+Early stopping! (Patience 5)
+ERROR FATAL en chb19: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb20 ===
+--- [Personalized] Cargando: chb20 ---
+   Train: 17228 | Val: 4308 | Crisis Train: 1712 (9.9%) | Crisis Val: 576
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5482 TrAcc: 0.8832 | ValLoss: 0.4344 ValAcc: 0.9381
+Ep 2/50 | TrLoss: 0.2286 TrAcc: 0.9630 | ValLoss: 0.1742 ValAcc: 0.9537
+Ep 3/50 | TrLoss: 0.0979 TrAcc: 0.9750 | ValLoss: 0.2004 ValAcc: 0.9456
+Ep 4/50 | TrLoss: 0.0596 TrAcc: 0.9836 | ValLoss: 0.1701 ValAcc: 0.9200
+Ep 5/50 | TrLoss: 0.0476 TrAcc: 0.9856 | ValLoss: 0.1965 ValAcc: 0.9072
+Ep 6/50 | TrLoss: 0.0423 TrAcc: 0.9875 | ValLoss: 0.2110 ValAcc: 0.9004
+Early stopping! (Patience 5)
+ERROR FATAL en chb20: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb21 ===
+--- [Personalized] Cargando: chb21 ---
+   Train: 11922 | Val: 2981 | Crisis Train: 1472 (12.3%) | Crisis Val: 88
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.5762 TrAcc: 0.8598 | ValLoss: 0.4425 ValAcc: 0.9704
+Ep 2/50 | TrLoss: 0.4016 TrAcc: 0.8764 | ValLoss: 0.2135 ValAcc: 0.9704
+Ep 3/50 | TrLoss: 0.3538 TrAcc: 0.8764 | ValLoss: 0.2063 ValAcc: 0.9704
+Ep 4/50 | TrLoss: 0.3110 TrAcc: 0.8766 | ValLoss: 0.1358 ValAcc: 0.9704
+Ep 5/50 | TrLoss: 0.2202 TrAcc: 0.9051 | ValLoss: 0.0813 ValAcc: 0.9761
+Ep 6/50 | TrLoss: 0.1046 TrAcc: 0.9742 | ValLoss: 0.0456 ValAcc: 0.9902
+Early stopping! (Patience 5)
+ERROR FATAL en chb21: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb22 ===
+--- [Personalized] Cargando: chb22 ---
+   Train: 9614 | Val: 2404 | Crisis Train: 1040 (10.8%) | Crisis Val: 568
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.6043 TrAcc: 0.8894 | ValLoss: 0.6325 ValAcc: 0.7628
+Ep 2/50 | TrLoss: 0.4287 TrAcc: 0.8931 | ValLoss: 0.4337 ValAcc: 0.7745
+Ep 3/50 | TrLoss: 0.2393 TrAcc: 0.9475 | ValLoss: 0.2451 ValAcc: 0.9491
+Ep 4/50 | TrLoss: 0.1360 TrAcc: 0.9703 | ValLoss: 0.2012 ValAcc: 0.9382
+Ep 5/50 | TrLoss: 0.0887 TrAcc: 0.9773 | ValLoss: 0.1595 ValAcc: 0.9432
+Ep 6/50 | TrLoss: 0.0457 TrAcc: 0.9923 | ValLoss: 0.0922 ValAcc: 0.9737
+Early stopping! (Patience 5)
+ERROR FATAL en chb22: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb23 ===
+--- [Personalized] Cargando: chb23 ---
+   Train: 27788 | Val: 6948 | Crisis Train: 1416 (5.1%) | Crisis Val: 1920
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3778 TrAcc: 0.9198 | ValLoss: 0.5469 ValAcc: 0.7233
+Ep 2/50 | TrLoss: 0.0855 TrAcc: 0.9655 | ValLoss: 0.3160 ValAcc: 0.9076
+Ep 3/50 | TrLoss: 0.0421 TrAcc: 0.9873 | ValLoss: 0.2044 ValAcc: 0.9546
+Ep 4/50 | TrLoss: 0.0268 TrAcc: 0.9921 | ValLoss: 0.0948 ValAcc: 0.9830
+Ep 5/50 | TrLoss: 0.0236 TrAcc: 0.9928 | ValLoss: 0.2616 ValAcc: 0.9411
+Ep 6/50 | TrLoss: 0.0216 TrAcc: 0.9938 | ValLoss: 0.2023 ValAcc: 0.9571
+Early stopping! (Patience 5)
+ERROR FATAL en chb23: Expected state_dict to be dict-like, got <class 'NoneType'>.
+
+=== Paciente chb24 ===
+--- [Personalized] Cargando: chb24 ---
+   Train: 36560 | Val: 9141 | Crisis Train: 2776 (7.6%) | Crisis Val: 1184
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.3865 TrAcc: 0.9365 | ValLoss: 0.1803 ValAcc: 0.9782
+Ep 2/50 | TrLoss: 0.1498 TrAcc: 0.9628 | ValLoss: 0.0925 ValAcc: 0.9859
+Ep 3/50 | TrLoss: 0.1384 TrAcc: 0.9657 | ValLoss: 0.1183 ValAcc: 0.9691
+Ep 4/50 | TrLoss: 0.1312 TrAcc: 0.9675 | ValLoss: 0.1056 ValAcc: 0.9724
+Ep 5/50 | TrLoss: 0.1216 TrAcc: 0.9684 | ValLoss: 0.2315 ValAcc: 0.9277
+Ep 6/50 | TrLoss: 0.1084 TrAcc: 0.9718 | ValLoss: 0.1721 ValAcc: 0.9434
+Early stopping! (Patience 5)
+ERROR FATAL en chb24: Expected state_dict to be dict-like, got <class 'NoneType'>.
+Guardado: histories_personalized.json, confusion_matrices_personalized.json
+No se generaron resultados.

@@ -1,0 +1,12 @@
+plot_results.py:393: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=plot_df, x='Experimento', y='Accuracy', ax=axes[0], palette='Set2')
+plot_results.py:407: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=plot_df, x='Experimento', y='F1-Score', ax=axes[1], palette='Set2')
+plot_results.py:204: RuntimeWarning: invalid value encountered in divide
+  cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]

@@ -1,0 +1,321 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS1
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO LEAVE-ONE-OUT (Total Folds: 24) <<<
+   Precargando 24 pacientes...
+      chb01: 26529 ventanas
+      chb02: 9153 ventanas
+      chb03: 27524 ventanas
+      chb04: 21860 ventanas
+      chb05: 12992 ventanas
+      chb06: 47370 ventanas
+      chb07: 18591 ventanas
+      chb08: 15700 ventanas
+      chb09: 19165 ventanas
+      chb10: 28315 ventanas
+      chb11: 10959 ventanas
+      chb12: 23810 ventanas
+      chb13: 27583 ventanas
+      chb14: 25824 ventanas
+      chb15: 62984 ventanas
+      chb16: 17926 ventanas
+      chb17: 12665 ventanas
+      chb18: 22073 ventanas
+      chb19: 11988 ventanas
+      chb20: 21536 ventanas
+      chb21: 14903 ventanas
+      chb22: 12018 ventanas
+      chb23: 34736 ventanas
+      chb24: 45701 ventanas
+   [OK] 24 pacientes listos.
+
+
+=== Test: chb01 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb01 ---
+   Usando datos precargados...
+   Train: 545376 | Test: 26529
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1999 TrAcc: 0.9282 | ValLoss: 0.1085 ValAcc: 0.9667
+Ep 2/50 | TrLoss: 0.1246 TrAcc: 0.9579 | ValLoss: 0.1112 ValAcc: 0.9662
+Ep 3/50 | TrLoss: 0.1026 TrAcc: 0.9657 | ValLoss: 0.0947 ValAcc: 0.9735
+Ep 4/50 | TrLoss: 0.0874 TrAcc: 0.9710 | ValLoss: 0.0776 ValAcc: 0.9737
+Ep 5/50 | TrLoss: 0.0743 TrAcc: 0.9750 | ValLoss: 0.0842 ValAcc: 0.9705
+Ep 6/50 | TrLoss: 0.0651 TrAcc: 0.9780 | ValLoss: 0.1024 ValAcc: 0.9638
+Ep 7/50 | TrLoss: 0.0560 TrAcc: 0.9809 | ValLoss: 0.1361 ValAcc: 0.9530
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.97      0.97      0.97     23049
+     Seizure       0.83      0.81      0.82      3480
+
+    accuracy                           0.95     26529
+   macro avg       0.90      0.89      0.90     26529
+weighted avg       0.95      0.95      0.95     26529
+
+
+=== Test: chb02 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb02 ---
+   Usando datos precargados...
+   Train: 562752 | Test: 9153
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1981 TrAcc: 0.9289 | ValLoss: 0.3107 ValAcc: 0.8912
+Ep 2/50 | TrLoss: 0.1266 TrAcc: 0.9571 | ValLoss: 0.1340 ValAcc: 0.9553
+Ep 3/50 | TrLoss: 0.1060 TrAcc: 0.9644 | ValLoss: 0.1327 ValAcc: 0.9544
+Ep 4/50 | TrLoss: 0.0915 TrAcc: 0.9694 | ValLoss: 0.2083 ValAcc: 0.9313
+Ep 5/50 | TrLoss: 0.0800 TrAcc: 0.9730 | ValLoss: 0.1105 ValAcc: 0.9636
+Ep 6/50 | TrLoss: 0.0704 TrAcc: 0.9762 | ValLoss: 0.2046 ValAcc: 0.9195
+Ep 7/50 | TrLoss: 0.0608 TrAcc: 0.9791 | ValLoss: 0.1610 ValAcc: 0.9543
+Ep 8/50 | TrLoss: 0.0539 TrAcc: 0.9813 | ValLoss: 0.1334 ValAcc: 0.9533
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.96      0.97      7801
+     Seizure       0.80      0.92      0.85      1352
+
+    accuracy                           0.95      9153
+   macro avg       0.89      0.94      0.91      9153
+weighted avg       0.96      0.95      0.95      9153
+
+
+=== Test: chb03 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb03 ---
+   Usando datos precargados...
+   Train: 544381 | Test: 27524
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2026 TrAcc: 0.9270 | ValLoss: 0.1135 ValAcc: 0.9543
+Ep 2/50 | TrLoss: 0.1282 TrAcc: 0.9565 | ValLoss: 0.1294 ValAcc: 0.9519
+Ep 3/50 | TrLoss: 0.1070 TrAcc: 0.9642 | ValLoss: 0.0772 ValAcc: 0.9754
+Ep 4/50 | TrLoss: 0.0922 TrAcc: 0.9691 | ValLoss: 0.2013 ValAcc: 0.9432
+Ep 5/50 | TrLoss: 0.0805 TrAcc: 0.9729 | ValLoss: 0.1886 ValAcc: 0.9532
+Ep 6/50 | TrLoss: 0.0700 TrAcc: 0.9762 | ValLoss: 0.2493 ValAcc: 0.9410
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.94      1.00      0.97     24364
+     Seizure       0.99      0.49      0.66      3160
+
+    accuracy                           0.94     27524
+   macro avg       0.96      0.74      0.81     27524
+weighted avg       0.94      0.94      0.93     27524
+
+
+=== Test: chb04 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb04 ---
+   Usando datos precargados...
+   Train: 550045 | Test: 21860
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2004 TrAcc: 0.9282 | ValLoss: 0.1502 ValAcc: 0.9408
+Ep 2/50 | TrLoss: 0.1269 TrAcc: 0.9572 | ValLoss: 0.1080 ValAcc: 0.9615
+Ep 3/50 | TrLoss: 0.1058 TrAcc: 0.9648 | ValLoss: 0.1995 ValAcc: 0.9325
+Ep 4/50 | TrLoss: 0.0916 TrAcc: 0.9697 | ValLoss: 0.1255 ValAcc: 0.9556
+Ep 5/50 | TrLoss: 0.0804 TrAcc: 0.9732 | ValLoss: 0.1704 ValAcc: 0.9457
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.95      0.99      0.97     18868
+     Seizure       0.90      0.68      0.77      2992
+
+    accuracy                           0.95     21860
+   macro avg       0.93      0.83      0.87     21860
+weighted avg       0.94      0.95      0.94     21860
+
+
+=== Test: chb05 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb05 ---
+   Usando datos precargados...
+   Train: 558913 | Test: 12992
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1905 TrAcc: 0.9318 | ValLoss: 0.3429 ValAcc: 0.8439
+Ep 2/50 | TrLoss: 0.1191 TrAcc: 0.9600 | ValLoss: 0.4098 ValAcc: 0.8292
+Ep 3/50 | TrLoss: 0.0988 TrAcc: 0.9673 | ValLoss: 0.2536 ValAcc: 0.9096
+Ep 4/50 | TrLoss: 0.0851 TrAcc: 0.9718 | ValLoss: 0.3278 ValAcc: 0.8798
+Ep 5/50 | TrLoss: 0.0732 TrAcc: 0.9755 | ValLoss: 0.3427 ValAcc: 0.8728
+Ep 6/50 | TrLoss: 0.0642 TrAcc: 0.9783 | ValLoss: 0.4000 ValAcc: 0.8837
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.91      0.91      0.91      8568
+     Seizure       0.83      0.83      0.83      4424
+
+    accuracy                           0.88     12992
+   macro avg       0.87      0.87      0.87     12992
+weighted avg       0.88      0.88      0.88     12992
+
+
+=== Test: chb06 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb06 ---
+   Usando datos precargados...
+   Train: 524535 | Test: 47370
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2019 TrAcc: 0.9269 | ValLoss: 0.1296 ValAcc: 0.9645
+Ep 2/50 | TrLoss: 0.1283 TrAcc: 0.9566 | ValLoss: 0.1636 ValAcc: 0.9460
+Ep 3/50 | TrLoss: 0.1055 TrAcc: 0.9648 | ValLoss: 0.1495 ValAcc: 0.9559
+Ep 4/50 | TrLoss: 0.0905 TrAcc: 0.9699 | ValLoss: 0.2441 ValAcc: 0.9062
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.98      0.92      0.95     46226
+     Seizure       0.08      0.26      0.12      1144
+
+    accuracy                           0.91     47370
+   macro avg       0.53      0.59      0.53     47370
+weighted avg       0.96      0.91      0.93     47370
+
+
+=== Test: chb07 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb07 ---
+   Usando datos precargados...
+   Train: 553314 | Test: 18591
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1934 TrAcc: 0.9309 | ValLoss: 0.2220 ValAcc: 0.9634
+Ep 2/50 | TrLoss: 0.1231 TrAcc: 0.9586 | ValLoss: 0.2442 ValAcc: 0.9530
+Ep 3/50 | TrLoss: 0.1029 TrAcc: 0.9657 | ValLoss: 0.3111 ValAcc: 0.9334
+Ep 4/50 | TrLoss: 0.0869 TrAcc: 0.9709 | ValLoss: 0.2810 ValAcc: 0.9543
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.96      0.97     16015
+     Seizure       0.79      0.91      0.85      2576
+
+    accuracy                           0.95     18591
+   macro avg       0.89      0.94      0.91     18591
+weighted avg       0.96      0.95      0.96     18591
+
+
+=== Test: chb08 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb08 ---
+   Usando datos precargados...
+   Train: 556205 | Test: 15700
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1857 TrAcc: 0.9338 | ValLoss: 1.1376 ValAcc: 0.6741
+Ep 2/50 | TrLoss: 0.1136 TrAcc: 0.9623 | ValLoss: 0.7200 ValAcc: 0.7175
+Ep 3/50 | TrLoss: 0.0924 TrAcc: 0.9697 | ValLoss: 1.0363 ValAcc: 0.6871
+Ep 4/50 | TrLoss: 0.0793 TrAcc: 0.9742 | ValLoss: 0.8991 ValAcc: 0.7218
+Ep 5/50 | TrLoss: 0.0687 TrAcc: 0.9773 | ValLoss: 1.7551 ValAcc: 0.6586
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.61      1.00      0.76      8388
+     Seizure       0.99      0.27      0.42      7312
+
+    accuracy                           0.66     15700
+   macro avg       0.80      0.63      0.59     15700
+weighted avg       0.79      0.66      0.60     15700
+
+
+=== Test: chb09 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb09 ---
+   Usando datos precargados...
+   Train: 552740 | Test: 19165
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1899 TrAcc: 0.9328 | ValLoss: 0.5418 ValAcc: 0.7375
+Ep 2/50 | TrLoss: 0.1211 TrAcc: 0.9592 | ValLoss: 0.5833 ValAcc: 0.7400
+Ep 3/50 | TrLoss: 0.1021 TrAcc: 0.9659 | ValLoss: 1.4593 ValAcc: 0.4731
+Ep 4/50 | TrLoss: 0.0884 TrAcc: 0.9704 | ValLoss: 0.9958 ValAcc: 0.6316
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.59      0.74     16989
+     Seizure       0.23      0.97      0.37      2176
+
+    accuracy                           0.63     19165
+   macro avg       0.61      0.78      0.56     19165
+weighted avg       0.91      0.63      0.70     19165
+
+
+=== Test: chb10 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb10 ---
+   Usando datos precargados...
+   Train: 543590 | Test: 28315
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.2003 TrAcc: 0.9274 | ValLoss: 0.1626 ValAcc: 0.9579
+Ep 2/50 | TrLoss: 0.1265 TrAcc: 0.9572 | ValLoss: 0.1784 ValAcc: 0.9581
+Ep 3/50 | TrLoss: 0.1035 TrAcc: 0.9655 | ValLoss: 0.1516 ValAcc: 0.9630
+Ep 4/50 | TrLoss: 0.0895 TrAcc: 0.9699 | ValLoss: 0.1885 ValAcc: 0.9541
+Ep 5/50 | TrLoss: 0.0778 TrAcc: 0.9739 | ValLoss: 0.1600 ValAcc: 0.9619
+Ep 6/50 | TrLoss: 0.0689 TrAcc: 0.9768 | ValLoss: 0.1849 ValAcc: 0.9558
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.97      0.98      0.97     24795
+     Seizure       0.83      0.81      0.82      3520
+
+    accuracy                           0.96     28315
+   macro avg       0.90      0.89      0.90     28315
+weighted avg       0.96      0.96      0.96     28315
+
+
+=== Test: chb11 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb11 ---
+   Usando datos precargados...
+   Train: 560946 | Test: 10959
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1972 TrAcc: 0.9294 | ValLoss: 0.2321 ValAcc: 0.9514
+Ep 2/50 | TrLoss: 0.1208 TrAcc: 0.9594 | ValLoss: 0.2937 ValAcc: 0.9429
+Ep 3/50 | TrLoss: 0.0989 TrAcc: 0.9672 | ValLoss: 0.2677 ValAcc: 0.9548
+Ep 4/50 | TrLoss: 0.0849 TrAcc: 0.9718 | ValLoss: 0.2383 ValAcc: 0.9470
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.93      0.94      0.94      4535
+     Seizure       0.96      0.95      0.95      6424
+
+    accuracy                           0.95     10959
+   macro avg       0.94      0.95      0.95     10959
+weighted avg       0.95      0.95      0.95     10959
+
+
+=== Test: chb12 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb12 ---
+   Usando datos precargados...
+   Train: 548095 | Test: 23810
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1779 TrAcc: 0.9376 | ValLoss: 1.3771 ValAcc: 0.6751
+Ep 2/50 | TrLoss: 0.1100 TrAcc: 0.9637 | ValLoss: 1.3052 ValAcc: 0.6764
+Ep 3/50 | TrLoss: 0.0918 TrAcc: 0.9699 | ValLoss: 1.4207 ValAcc: 0.6770
+Ep 4/50 | TrLoss: 0.0786 TrAcc: 0.9743 | ValLoss: 1.4164 ValAcc: 0.6742
+Ep 5/50 | TrLoss: 0.0683 TrAcc: 0.9774 | ValLoss: 2.0882 ValAcc: 0.6749
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.68      0.99      0.81     16114
+     Seizure       0.35      0.01      0.01      7696
+
+    accuracy                           0.67     23810
+   macro avg       0.51      0.50      0.41     23810
+weighted avg       0.57      0.67      0.55     23810
+
+
+=== Test: chb13 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb13 ---
+   Usando datos precargados...
+   Train: 544322 | Test: 27583
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1889 TrAcc: 0.9318 | ValLoss: 0.5493 ValAcc: 0.8575
+Ep 2/50 | TrLoss: 0.1177 TrAcc: 0.9603 | ValLoss: 0.5593 ValAcc: 0.7956

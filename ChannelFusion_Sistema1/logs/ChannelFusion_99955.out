@@ -1,0 +1,67 @@
+Dispositivo actual: cuda
+Modelo seleccionado: SIS1
+GPU Info: NVIDIA TITAN X (Pascal)
+Pacientes detectados (24): ['chb01', 'chb02', 'chb03', 'chb04', 'chb05', 'chb06', 'chb07', 'chb08', 'chb09', 'chb10', 'chb11', 'chb12', 'chb13', 'chb14', 'chb15', 'chb16', 'chb17', 'chb18', 'chb19', 'chb20', 'chb21', 'chb22', 'chb23', 'chb24']
+
+>>> INICIANDO EXPERIMENTO LEAVE-ONE-OUT (Total Folds: 3) <<<
+   Precargando 3 pacientes...
+      chb01: 26529 ventanas
+      chb02: 9153 ventanas
+      chb03: 27524 ventanas
+   [OK] 3 pacientes listos.
+
+
+=== Test: chb01 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb01 ---
+   Usando datos precargados...
+   Train: 36677 | Test: 26529
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.1797 TrAcc: 0.9265 | ValLoss: 0.1242 ValAcc: 0.9539
+Ep 2/50 | TrLoss: 0.0627 TrAcc: 0.9803 | ValLoss: 0.0961 ValAcc: 0.9658
+Ep 3/50 | TrLoss: 0.0341 TrAcc: 0.9894 | ValLoss: 0.1004 ValAcc: 0.9590
+Ep 4/50 | TrLoss: 0.0223 TrAcc: 0.9929 | ValLoss: 0.1001 ValAcc: 0.9603
+Ep 5/50 | TrLoss: 0.0151 TrAcc: 0.9954 | ValLoss: 0.1287 ValAcc: 0.9471
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.95      0.97     23049
+     Seizure       0.73      0.94      0.82      3480
+
+    accuracy                           0.95     26529
+   macro avg       0.86      0.95      0.90     26529
+weighted avg       0.96      0.95      0.95     26529
+
+
+=== Test: chb02 (Train: Resto) ===
+--- [Leave-One-Out] Test Patient: chb02 ---
+   Usando datos precargados...
+   Train: 54053 | Test: 9153
+Entrenando en cuda...
+Ep 1/50 | TrLoss: 0.0985 TrAcc: 0.9650 | ValLoss: 0.4284 ValAcc: 0.8169
+Ep 2/50 | TrLoss: 0.0346 TrAcc: 0.9890 | ValLoss: 0.5967 ValAcc: 0.7996
+Ep 3/50 | TrLoss: 0.0242 TrAcc: 0.9920 | ValLoss: 0.4504 ValAcc: 0.9099
+Ep 4/50 | TrLoss: 0.0192 TrAcc: 0.9933 | ValLoss: 0.2288 ValAcc: 0.9409
+Ep 5/50 | TrLoss: 0.0126 TrAcc: 0.9958 | ValLoss: 0.2605 ValAcc: 0.9461
+Ep 6/50 | TrLoss: 0.0096 TrAcc: 0.9970 | ValLoss: 0.2915 ValAcc: 0.9329
+Ep 7/50 | TrLoss: 0.0080 TrAcc: 0.9974 | ValLoss: 0.3082 ValAcc: 0.9375
+Early stopping! (Patience 3)
+
+=== Reporte Validación ===
+              precision    recall  f1-score   support
+
+      Normal       0.96      0.96      0.96      7801
+     Seizure       0.79      0.79      0.79      1352
+
+    accuracy                           0.94      9153
+   macro avg       0.88      0.88      0.88      9153
+weighted avg       0.94      0.94      0.94      9153
+
+Guardado: histories_leave_one_out.json, confusion_matrices_leave_one_out.json
+
+=== RESULTADOS FINALES (leave_one_out) ===
+  patient  accuracy        f1
+0   chb01  0.947114  0.949852
+1   chb02  0.937507  0.937545
+Guardado en results_leave_one_out.csv
